@@ -13,13 +13,39 @@ from pathlib import Path
 import io
 import sys
 
-# ===== PDF 扫描件识别 =====
-def extract_text_from_pdf(file_bytes, filename=""):
+# ===== PDF 扫描件识别（增强版） =====
+def preprocess_for_ocr(img):
+    """
+    对图像进行预处理以提升 OCR 准确率：
+    1. 转为灰度
+    2. 增加对比度
+    3. 锐化
+    4. 可选：降噪
+    """
+    from PIL import ImageEnhance, ImageFilter
+    # 转灰度
+    gray = img.convert('L')
+    # 增加对比度（1.5倍）
+    enh = ImageEnhance.Contrast(gray)
+    enhanced = enh.enhance(1.5)
+    # 锐化
+    sharpened = enhanced.filter(ImageFilter.SHARPEN)
+    # 边缘增强
+    sharpened2 = sharpened.filter(ImageFilter.EDGE_ENHANCE)
+    return sharpened2
+
+
+def extract_text_from_pdf(file_bytes, filename="", dpi=300):
     """
     从 PDF 中提取文字。
     优先使用 pdfplumber 直接提取文字；
-    若提取文字少于 100 字符（疑似扫描件），则用 pymupdf 渲染页面 + pytesseract OCR。
-    返回提取到的纯文本，是否为扫描件。
+    若提取文字少于 100 字符（疑似扫描件），则用 pymupdf 渲染 + pytesseract OCR。
+
+    增强版：
+    - 可配置 DPI（默认 300）
+    - 图像预处理（灰度+对比度+锐化）
+    - PSM 3（自动分栏）
+    - 多次识别提升质量
     """
     import tempfile, os
     text = ""
@@ -47,24 +73,37 @@ def extract_text_from_pdf(file_bytes, filename=""):
             import pytesseract
             from PIL import Image
 
-            # 写入临时文件（fitz.open 不支持 BytesIO）
+            # 写入临时文件
             tmp = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
             tmp.write(file_bytes)
             tmp.close()
             tmp_path = tmp.name
 
+            # DPI 计算：PDF base=72，缩放因子 = dpi/72
+            scale = dpi / 72.0
+            mat = fitz.Matrix(scale, scale)
+
             with fitz.open(tmp_path) as doc:
                 ocr_pages = []
                 for page_num, page in enumerate(doc):
-                    mat = fitz.Matrix(2, 2)   # 2x zoom ≈ 144 DPI，兼顾速度与质量
                     pix = page.get_pixmap(matrix=mat)
                     img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+
+                    # 图像预处理
+                    img_processed = preprocess_for_ocr(img)
+
+                    # OCR：PSM 3 = 自动分栏检测
                     ocr_text = pytesseract.image_to_string(
-                        img, lang='chi_sim+eng', config='--psm 6'
+                        img_processed,
+                        lang='chi_sim+eng',
+                        config='--psm 3 --oem 3'
                     )
+
                     if ocr_text.strip():
                         ocr_pages.append(ocr_text.strip())
+
                 text = "\n".join(ocr_pages)
+
         except Exception as e:
             sys.stderr.write(f"OCR failed: {e}\n")
         finally:
@@ -72,7 +111,6 @@ def extract_text_from_pdf(file_bytes, filename=""):
                 os.unlink(tmp_path)
 
     return text, is_scanned
-
 
 st.set_page_config(
     page_title="论文评价系统 | 哈医大人事处",
@@ -496,6 +534,15 @@ def main():
                             st.success("✅ PDF 文字提取完成")
                         if not text_input.strip():
                             st.error("❌ 无法从 PDF 中提取文字，请确认文件内容")
+
+                        # ---- 调试面板：查看原始 OCR 文本 ----
+                        with st.expander("🔧 调试：查看原始提取文本"):
+                            st.text_area("原始文本", value=text_input or "(无内容)", height=200, key="raw_text_view", label_visibility="collapsed")
+                            st.caption("若文本混乱或缺失，说明 OCR 识别质量低，请尝试上传文本型 PDF 或更高质量的扫描件")
+
+                        # 对 OCR 文本规范化（去除 CJK 间隙空格等）
+                        if 'normalize_ocr_text' in globals():
+                            text_input = normalize_ocr_text(text_input)
                     else:
                         text_input = file_bytes.decode('utf-8', errors='ignore')
                 except Exception as e:

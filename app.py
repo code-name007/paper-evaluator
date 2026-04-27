@@ -153,98 +153,208 @@ def get_sci_zone_from_crossref(journal_name, session):
     return None
 
 def parse_papers(text):
-    """从文本中解析论文列表"""
-    lines = [l.strip() for l in text.split('\n') if l.strip()]
-    papers = []
-    current = None
+    """
+    从文本中智能解析论文列表。
+    采用状态机逐行处理，识别论文起始标记并聚块。
+    """
+    text = text.replace('\r\n', '\n').replace('\r', '\n')
+    raw_lines = [l.rstrip() for l in text.split('\n')]
 
-    for line in lines:
-        # 跳过明显非论文行
-        if len(line) < 10:
+    # 预处理：合并断行（行尾非终止符且下一行以小写或字母开头）
+    NO_MERGE_END = set('。；：！？》」』】。，、；：？！）】}.,;:!?)]}')
+    merged_lines = []
+    for line in raw_lines:
+        stripped = line.strip()
+        if not stripped:
+            merged_lines.append('')
             continue
-        # 新论文开始（通常是年份开头或序号）
-        if re.match(r'^\d+[\.、\)]', line) or re.match(r'^\[\d+\]', line):
-            if current:
-                papers.append(current)
-            current = {'raw': line, 'parts': [line]}
-        elif current:
-            current['parts'].append(line)
-            current['raw'] += ' | ' + line
+        if (merged_lines and merged_lines[-1]
+                and merged_lines[-1][-1] not in NO_MERGE_END
+                and stripped[0].islower()):
+            merged_lines[-1] += ' ' + stripped
+        else:
+            merged_lines.append(stripped)
 
-    if current:
-        papers.append(current)
+    # 论文起始行检测（多模式）
+    PAPER_START = re.compile(
+        r'^('                      # 组1：编号前缀
+            r'\[\d+\]'             # [1]
+            r'|\([0-9]+\)'         # (1)
+            r'|\d+[．、\.】」』]'   # 1. 或 1、 或 1] 等
+            r'|【[0-9]+】'         # 【1】
+        r')\s*[\.、、\-\–—]?\s*'  # 可选分隔符
+        r'|^[0-9]{4}年'           # 或以年份开头
+    )
+    # 章节标题检测
+    SECTION_HDR = re.compile(
+        r'^[一二三四五六七八九十]+[、．.·]\s*(?:发表|论文|学术|科研|课题|主持|著作|获奖|专利|教育|工作)'
+        r'|^(?:期刊论文|学术论文|论著|代表作)[:：]'
+        r'|^\(?[0-9]+\)?\s*(?:、|·)\s*(?:发表|论文)'
+    )
 
-    return papers
+    blocks = []
+    current_lines = []
+
+    for line in merged_lines:
+        if not line.strip():
+            if current_lines:
+                blocks.append(' '.join(current_lines))
+                current_lines = []
+            continue
+
+        # 章节标题 → 结束当前块
+        if SECTION_HDR.match(line.strip()):
+            if current_lines:
+                blocks.append(' '.join(current_lines))
+                current_lines = []
+            continue
+
+        # 新论文起始 → 结束当前块，开启新块
+        if PAPER_START.match(line.strip()):
+            if current_lines:
+                blocks.append(' '.join(current_lines))
+                current_lines = []
+            current_lines = [line.strip()]
+        else:
+            current_lines.append(line.strip())
+
+    if current_lines:
+        blocks.append(' '.join(current_lines))
+
+    # 过滤：每块至少30字符，必须有期刊/年/页等学术特征
+    filtered = []
+    for b in blocks:
+        if len(b) < 20:
+            continue
+        has_year = bool(re.search(r'20[12]\d', b))
+        has_journal = bool(re.search(r'[《》][^《》]{2,50}[《》]|'
+                                      r'[A-Z][a-z]+(\s+[A-Z][a-z]+){0,3}\s*,'
+                                      r'|期刊|学报|杂志|会记|文集', b))
+        has_page = bool(re.search(r'\d+\s*[-–—~]\s*\d+', b))
+        if has_year or has_journal or has_page:
+            filtered.append({'raw': b, 'parts': [b]})
+
+    return filtered
+
+
 
 def extract_paper_info(paper):
-    """从解析的论文块中提取期刊名、作者位置、年、卷、期、页、标题"""
+    """
+    从论文文本块中提取各字段。
+    期刊名、标题、年、卷、期、页码、作者位置逐字段多模式提取。
+    """
     raw = paper.get('raw', '')
-    full_text = ' '.join(paper.get('parts', []))
+    t = raw
 
-    # ---- 期刊名识别 ----
-    journal_patterns = [
-        r'《([^》]+)》',
-        r'in\s+([A-Za-z\s&:\']+?)(?:\.|,|;|\d|\n|$)',
-        r'\[([^\]]+)\]',
-        r'发表[于在：:]+([^\s，。,；；]+)',
-        r'收录[于在：:]+([^\s，。,；；]+)',
-        r'期刊[：:]\s*([^，,。\n]+)',
+    # ========== 期刊名 ==========
+    journal = ''
+    j_pats = [
+        r'《([^》]{2,50})》',                                                # 《中华医学杂志》
+        r'\.?\s*([A-Z][A-Za-z\s&:\'\-]{3,60}?)\s*,\s*(?:20\d\d|Vol\.?|vol\.?)',  # Nature, 2020 或 Nature, Vol.10
+        r'\[J\]\.\s+([^\s,，]{2,40}?)\s*,',
+        r'发表(?:于|在)+([^\s,，。]{2,40}?)(?:\s*[，,]|\s*20)',              # 发表于中华医学杂志,
+        r'期刊[：:]\s*([^\s,，。]{2,40})',                                   # 期刊: 中华医学杂志
+        r'学报[：:]\s*([^\s,，。]{2,40})',                                    # 学报:
+        r'\b([A-Z][A-Za-z\s&:\-]{3,50})\s*\(\d{4}\)',                      # Nature (2020)
     ]
-    journal_name = ''
-    for pat in journal_patterns:
-        m = re.search(pat, full_text)
+    for pat in j_pats:
+        m = re.search(pat, t, re.I)
         if m:
-            candidate = m.group(1).strip()
-            if 3 < len(candidate) < 200 and not candidate.isdigit():
-                journal_name = candidate
+            cand = m.group(1).strip().strip('.,;:、')
+            if 2 < len(cand) < 70 and not re.match(r'^[\d\-\s]+$', cand):
+                # 去掉末尾标点
+                cand = re.sub(r'[,.，;;：:]+$', '', cand)
+                cand = re.sub(r'^[*#\d\s]+', '', cand)
+                journal = cand
                 break
 
-    # ---- 年、卷、期、页码识别 ----
-    year_match = re.search(r'20[12]\d[年]?|19[89]\d[年]?', full_text)
-    year = year_match.group() if year_match else ''
-    vol_match = re.search(r'卷\s*\.?\s*(\d+)', full_text)
-    vol = vol_match.group(1) if vol_match else ''
-    issue_match = re.search(r'期\s*\.?\s*(\d+)', full_text)
-    issue = issue_match.group(1) if issue_match else ''
-    pages_match = re.search(r'(\d+)[-–](\d+)', full_text)
-    pages = f"{pages_match.group(1)}-{pages_match.group(2)}" if pages_match else ''
+    # ========== 年份 ==========
+    year = ''
+    for pat in [r'(20[12]\d)年?', r'[\(©](20[12]\d)[\)]', r',\s*(20[12]\d)[,\s]', r'(20[12]\d)年第']:
+        m = re.search(pat, t)
+        if m:
+            yr = re.sub(r'\D', '', m.group(1))
+            if 2000 <= int(yr[:4]) <= 2030:
+                year = yr[:4]
+                break
 
-    # ---- 论文标题识别 ----
+    # ========== 卷、期 ==========
+    vol = ''; issue = ''
+    for pat in [r'Vol\.?\s*(\d+)', r'vol\.?\s*(\d+)', r'第(\d+)卷', r'[卷v][olume]*[：:.]?\s*(\d+)']:
+        m = re.search(pat, t, re.I)
+        if m:
+            vol = m.group(1)
+            break
+    # 尝试 10(2) 格式
+    m_vi = re.search(r'(\d+)\s*\((\d+)\)', t)
+    if m_vi:
+        vol = m_vi.group(1)
+        issue = m_vi.group(2)
+    for pat in [r'第(\d+)期', r'[期(](\d+)\)?', r'\((\d+)\)\s*$']:
+        m = re.search(pat, t)
+        if m and not issue:
+            issue = m.group(1)
+            break
+
+    # ========== 页码 ==========
+    pages = ''
+    for pat in [r'(\d+)\s*[-–—~∼]\s*(\d+)\s*(?:p\.?|pp\.?|页)?', r'pp?\.?\s*(\d+)\s*[-–]\s*(\d+)']:
+        m = re.search(pat, t)
+        if m:
+            pages = f"{m.group(1)}-{m.group(2)}"
+            break
+
+    # ========== 论文标题 ==========
     title = ''
-    title_patterns = [
-        r'《([^》]{5,80})》',      # 中文标题在《》
-        r'^([A-Z][A-Za-z\s:,\-]{10,150})$',  # 英文标题（单独一行）
-        r'论文[：:]\s*(.{5,80})',
-    ]
-    for pat in title_patterns:
-        m = re.search(pat, full_text, re.MULTILINE)
+    for pat in [r'《([^》]{5,80})》', r'^([A-Z][A-Za-z\s:\-]{10,120})$',
+                r'标题[：:]\s*([^\n]{5,100})', r'论文[：:]\s*([^\n]{5,100})']:
+        m = re.search(pat, t, re.I | re.MULTILINE)
         if m:
-            candidate = m.group(1).strip()
-            if 5 < len(candidate) < 150:
-                title = candidate
+            cand = m.group(1).strip()
+            if 5 < len(cand) < 130:
+                title = cand
                 break
 
-    # ---- 作者位置识别 ----
-    is_first = any(kw in full_text for kw in ['第一作者', '排名第一', '第一通讯', '共一', '共同第一'])
-    is_corresponding = any(kw in full_text for kw in ['通讯作者', 'Corresponding', 'correspondence', '联系作者', '通信作者', 'Corresponding author'])
-    is_valid = is_first or is_corresponding
+    # ========== 作者位置 ==========
+    is_first = bool(re.search(r'第一作者|排名第一|共一|共同第一|首位作者', t))
+    is_corr = bool(re.search(r'通讯作者|通信作者|Corresponding|联系作者', t, re.I))
+    has_marker = bool(re.search(r'作者|author', t, re.I))
 
     position = []
     if is_first: position.append('第一作者')
-    if is_corresponding: position.append('通讯作者')
+    if is_corr: position.append('通讯作者')
 
     return {
-        'journal_name': journal_name,
+        'journal_name': journal,
         'title': title,
         'year': year,
         'volume': vol,
         'issue': issue,
         'pages': pages,
-        'raw': raw[:200],
-        'is_valid': is_valid,
-        'position': '、'.join(position) if position else '其他',
+        'raw': raw[:300],
+        'is_valid': bool(position) or has_marker,
+        'position': '、'.join(position) if position else '（未标注作者位置）',
         'parts': paper.get('parts', []),
     }
+
+
+if __name__ == '__main__':
+    sample = """
+一、 发表论文
+1. 张三, 李四. 人工智能在医学中的应用研究[J]. 中华医学杂志, 2023, 45(3): 123-130. （第一作者）
+2. 王五, 赵六. 机器学习算法综述[J]. 计算机学报, 2022, 38(5): 456-470. （通讯作者）
+[3] 刘七. 大数据时代的隐私保护[C]. 信息安全会议, 2021: 78-85.
+4. 陈八. 深度学习在影像诊断中的应用[J]. 中华放射学杂志, 2024, 58(1): 34-40. 第一作者
+"""
+    papers = parse_papers(sample)
+    print(f"识别到: {len(papers)} 篇")
+    for i, p in enumerate(papers):
+        info = extract_paper_info(p)
+        print(f"\n--- 第{i+1}篇 ---")
+        print(f"  期刊: [{info['journal_name']}]")
+        print(f"  年: {info['year']}  卷: {info['volume']}  期: {info['issue']}  页: {info['pages']}")
+        print(f"  位置: {info['position']}  有效: {info['is_valid']}")
+        print(f"  原文: {info['raw'][:100]}")
 
 def main():
     st.title("📖 论文情况评价 & 高水平期刊匹配系统")

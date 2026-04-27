@@ -157,6 +157,88 @@ st.set_page_config(
 
 # ===== 加载期刊数据 =====
 @st.cache_data
+
+
+# ===== PDF 转 Word（适合排版复杂的文本型 PDF） =====
+def convert_pdf_to_docx_text(pdf_bytes):
+    """
+    将 PDF 转换为 docx，再读取纯文本。
+    适合：多栏排版、特殊字体、复杂图表的 PDF。
+    返回：(文本内容, 转换是否成功)
+    """
+    from pdf2docx import Converter
+    from docx import Document
+    import tempfile, os
+
+    tmp_pdf = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+    tmp_pdf.write(pdf_bytes)
+    tmp_pdf.close()
+
+    tmp_docx = tempfile.NamedTemporaryFile(suffix='.docx', delete=False)
+    tmp_docx.close()
+    docx_path = tmp_docx.name
+
+    try:
+        cv = Converter(tmp_pdf.name)
+        cv.convert(docx_path, start=0, end=None)
+        cv.close()
+        doc = Document(docx_path)
+        paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
+        return '\n'.join(paragraphs), True
+    except Exception as e:
+        sys.stderr.write(f"PDF转Word失败: {e}\n")
+        return "", False
+    finally:
+        for p in [tmp_pdf.name, docx_path]:
+            if os.path.exists(p):
+                try: os.unlink(p)
+                except: pass
+
+
+# ===== EasyOCR 深度识别（扫描件增强 OCR） =====
+def extract_text_by_easyocr(pdf_bytes, dpi=200):
+    """
+    使用 EasyOCR（深度学习 OCR引擎）对 PDF 进行识别。
+    对中文识别率显著高于 Tesseract。
+    首次运行需下载模型（约 2GB），已安装到本地后离线可用。
+    返回：(识别的文本, 是否成功)
+    """
+    import easyocr
+    import fitz
+    from PIL import Image, ImageEnhance, ImageFilter
+    import numpy as np
+    import tempfile, os
+
+    tmp_pdf = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+    tmp_pdf.write(pdf_bytes)
+    tmp_pdf.close()
+    tmp_path = tmp_pdf.name
+
+    try:
+        reader = easyocr.Reader(['ch_sim', 'en'], gpu=False, verbose=False)
+        with fitz.open(tmp_path) as doc:
+            all_text = []
+            for page in doc:
+                mat = fitz.Matrix(dpi/72, dpi/72)
+                pix = page.get_pixmap(matrix=mat)
+                img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                gray = img.convert('L')
+                enh = ImageEnhance.Contrast(gray)
+                img_p = enh.enhance(1.5).filter(ImageFilter.SHARPEN)
+                results = reader.readtext(np.array(img_p), detail=0)
+                page_text = ' '.join([t.strip() for t in results if t.strip() and len(t.strip()) > 1])
+                if page_text:
+                    all_text.append(page_text)
+        return '\n'.join(all_text), True
+    except Exception as e:
+        sys.stderr.write(f"EasyOCR 识别失败: {e}\n")
+        return "", False
+    finally:
+        if os.path.exists(tmp_path):
+            try: os.unlink(tmp_path)
+            except: pass
+
+
 def load_journals():
     path = Path(__file__).parent / "journals_data.json"
     with open(path, 'r', encoding='utf-8') as f:
@@ -563,24 +645,60 @@ def main():
                         os.unlink(tmp.name)
                         text_input = '\n'.join([p.text for p in doc.paragraphs if p.text.strip()])
                     elif uploaded.name.endswith('.pdf'):
-                        with st.spinner("🔍 正在识别 PDF，请稍候（扫描件约需 10-30 秒）..."):
-                            text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
-                        if is_scanned:
-                            st.success("✅ PDF 已作为扫描件完成 OCR 文字识别")
-                        else:
-                            st.success("✅ PDF 文字提取完成")
-                        if not text_input.strip():
-                            st.error("❌ 无法从 PDF 中提取文字，请确认文件内容")
+                        # ---- 选择提取方式 ----
+                        extract_mode = st.radio(
+                            "PDF 提取方式",
+                            ["🧠 智能提取（推荐）", "📄 转Word再提取（适合复杂排版）", "🔬 EasyOCR深度识别（扫描件）"],
+                            captions=[
+                                "pdfplumber + PyMuPDF + Tesseract OCR 自动协作",
+                                "PDF → Word 转换后读取，保留完整排版",
+                                "深度学习 OCR，对中文识别率更高"
+                            ],
+                            horizontal=True,
+                            key="pdf_extract_mode"
+                        )
 
-                        # ---- 调试面板：查看原始 OCR 文本 ----
-                        with st.expander("🔧 调试：查看原始提取文本"):
-                            st.text_area("原始文本", value=text_input or "(无内容)", height=200, key="raw_text_view", label_visibility="collapsed")
-                            _pp = strategy_info.get('pdfplumber', 0)
-                            _pm = strategy_info.get('pymupdf', 0)
-                            _oc = strategy_info.get('ocr', 0)
-                            _bs = max(strategy_info, key=strategy_info.get) if strategy_info and max(strategy_info.values() or [0]) > 0 else '无'
-                            st.caption(f"提取策略:{_bs} | pdfplumber:{_pp}字 pymupdf:{_pm}字 ocr:{_oc}字")
-                            st.caption("若文本混乱或缺失，说明 OCR 识别质量低，请尝试上传文本型 PDF 或更高质量的扫描件")
+                        text_input = ""
+                        strategy_info = {}
+                        is_scanned = False
+
+                        if extract_mode.startswith("🧠"):
+                            with st.spinner("🔍 正在提取文字（智能模式）..."):
+                                text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
+                            if is_scanned:
+                                st.success("✅ 智能提取完成（Tesseract OCR）")
+                            else:
+                                st.success("✅ 智能提取完成")
+                        elif extract_mode.startswith("📄"):
+                            with st.spinner("🔄 正在将 PDF 转换为 Word（约需 10-30 秒）..."):
+                                text_input, ok = convert_pdf_to_docx_text(file_bytes)
+                            if ok and text_input.strip():
+                                st.success("✅ PDF 已转换为 Word 并提取文字")
+                                strategy_info = {"docx": len(text_input)}
+                            else:
+                                st.error("❌ PDF 转 Word 失败，改用智能提取")
+                                text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
+                        else:
+                            with st.spinner("🔬 正在使用 EasyOCR 深度识别（约需 20-60 秒）..."):
+                                text_input, ok = extract_text_by_easyocr(file_bytes)
+                            if ok and text_input.strip():
+                                st.success("✅ EasyOCR 深度识别完成")
+                                strategy_info = {"easyocr": len(text_input)}
+                            else:
+                                st.error("❌ EasyOCR 识别失败，改用智能提取")
+                                text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
+
+                        if not text_input.strip():
+                            st.error("❌ 无法从 PDF 中提取文字，请尝试其他提取方式")
+
+                        # ---- 调试面板 ----
+                        _total = sum((v for v in strategy_info.values() if isinstance(v, int)), 0)
+                        with st.expander(f"🔧 调试：查看原始提取文本（共 {_total} 字）"):
+                            st.text_area("原始文本", value=text_input or "(无内容)", height=250, key="raw_text_view", label_visibility="collapsed")
+                            if strategy_info:
+                                _parts = " ".join([f"{k}:{v}字" for k,v in strategy_info.items() if isinstance(v,int)])
+                                st.caption(f"提取结果: {_parts}")
+                            st.caption("若文本混乱，请尝试其他提取方式")
 
                         # 对 OCR 文本规范化（去除 CJK 间隙空格等）
                         if 'normalize_ocr_text' in globals():

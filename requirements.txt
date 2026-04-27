@@ -2,3 +2,7 @@ streamlit
 pandas
 requests
 python-docx
+pdfplumber
+pymupdf
+pytesseract
+Pillow

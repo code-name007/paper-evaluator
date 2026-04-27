@@ -645,62 +645,92 @@ def main():
                         os.unlink(tmp.name)
                         text_input = '\n'.join([p.text for p in doc.paragraphs if p.text.strip()])
                     elif uploaded.name.endswith('.pdf'):
-                        # ---- 选择提取方式 ----
-                        extract_mode = st.radio(
-                            "PDF 提取方式",
-                            ["🧠 智能提取（推荐）", "📄 转Word再提取（适合复杂排版）", "🔬 EasyOCR深度识别（扫描件）"],
-                            captions=[
-                                "pdfplumber + PyMuPDF + Tesseract OCR 自动协作",
-                                "PDF → Word 转换后读取，保留完整排版",
-                                "深度学习 OCR，对中文识别率更高"
-                            ],
-                            horizontal=True,
-                            key="pdf_extract_mode"
-                        )
+                        # ===== 一站式自动提取：自动尝试所有方法，取最优结果 =====
+                        st.info("📄 PDF 处理中，自动选择最佳提取方案...")
 
-                        text_input = ""
-                        strategy_info = {}
-                        is_scanned = False
+                        all_results = {}
 
-                        if extract_mode.startswith("🧠"):
-                            with st.spinner("🔍 正在提取文字（智能模式）..."):
-                                text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
-                            if is_scanned:
-                                st.success("✅ 智能提取完成（Tesseract OCR）")
-                            else:
-                                st.success("✅ 智能提取完成")
-                        elif extract_mode.startswith("📄"):
-                            with st.spinner("🔄 正在将 PDF 转换为 Word（约需 10-30 秒）..."):
-                                text_input, ok = convert_pdf_to_docx_text(file_bytes)
-                            if ok and text_input.strip():
-                                st.success("✅ PDF 已转换为 Word 并提取文字")
-                                strategy_info = {"docx": len(text_input)}
-                            else:
-                                st.error("❌ PDF 转 Word 失败，改用智能提取")
-                                text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
+                        # 方法1：PyMuPDF blocks（阅读顺序，多栏友好）
+                        try:
+                            import fitz
+                            tmp = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+                            tmp.write(file_bytes); tmp.close()
+                            with fitz.open(tmp.name) as doc:
+                                parts = []
+                                for page in doc:
+                                    blocks = page.get_text("blocks")
+                                    blocks.sort(key=lambda b: (round(b[1]/20)*20, b[0]))
+                                    page_text = "\n".join([b[4].strip() for b in blocks if b[4].strip()])
+                                    if page_text:
+                                        parts.append(page_text)
+                                txt = "\n".join(parts)
+                                all_results["PyMuPDF"] = (txt, len(txt.strip()))
+                            os.unlink(tmp.name)
+                        except Exception as e:
+                            sys.stderr.write("PyMuPDF failed: " + str(e) + "\n")
+
+                        # 方法2：pdfplumber
+                        try:
+                            import pdfplumber
+                            with pdfplumber.open(io.BytesIO(file_bytes)) as pdf:
+                                parts = [page.extract_text() or "" for page in pdf.pages if page.extract_text()]
+                                txt = "\n".join(parts)
+                                all_results["pdfplumber"] = (txt, len(txt.strip()))
+                        except Exception as e:
+                            sys.stderr.write("pdfplumber failed: " + str(e) + "\n")
+
+                        # 方法3：Tesseract OCR（扫描件）
+                        try:
+                            import fitz as fitzlib, pytesseract
+                            from PIL import Image, ImageEnhance, ImageFilter
+                            tmp = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+                            tmp.write(file_bytes); tmp.close()
+                            with fitzlib.open(tmp.name) as doc:
+                                ocr_parts = []
+                                for page in doc:
+                                    mat = fitzlib.Matrix(2, 2)
+                                    pix = page.get_pixmap(matrix=mat)
+                                    img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                                    gray = img.convert('L')
+                                    img_p = ImageEnhance.Contrast(gray).enhance(1.5).filter(ImageFilter.SHARPEN)
+                                    ocr_text = pytesseract.image_to_string(img_p, lang='chi_sim+eng', config='--psm 3 --oem 3')
+                                    if ocr_text.strip():
+                                        ocr_parts.append(ocr_text.strip())
+                                txt = "\n".join(ocr_parts)
+                                all_results["TesseractOCR"] = (txt, len(txt.strip()))
+                            os.unlink(tmp.name)
+                        except Exception as e:
+                            sys.stderr.write("Tesseract OCR failed: " + str(e) + "\n")
+
+                        # 自动选择：字符数最多的方法
+                        best_name = "PyMuPDF"
+                        best_len = 0
+                        best_text = ""
+                        for name, (txt, clen) in all_results.items():
+                            if clen > best_len:
+                                best_len = clen
+                                best_text = txt
+                                best_name = name
+
+                        text_input = best_text
+                        strategy_info = {name: clen for name, (txt, clen) in all_results.items()}
+
+                        if best_len == 0:
+                            st.error("❌ 无法从 PDF 中提取文字，可能是扫描件或加密 PDF")
+                            st.markdown("**建议：** 1. 在 PDF 阅读器中手动全选（Ctrl+A）→ 复制（Ctrl+C）\n2. 切换「粘贴文本」模式，Ctrl+V 粘贴，准确率接近 100%")
+                        elif best_len < 200:
+                            st.warning("⚠️ 提取文字较少（" + str(best_len) + " 字），可能是扫描件或纯图片 PDF")
+                            st.markdown("**建议：** 在 PDF 阅读器中复制文字，粘贴到「粘贴文本」模式")
                         else:
-                            with st.spinner("🔬 正在使用 EasyOCR 深度识别（约需 20-60 秒）..."):
-                                text_input, ok = extract_text_by_easyocr(file_bytes)
-                            if ok and text_input.strip():
-                                st.success("✅ EasyOCR 深度识别完成")
-                                strategy_info = {"easyocr": len(text_input)}
-                            else:
-                                st.error("❌ EasyOCR 识别失败，改用智能提取")
-                                text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
+                            st.success("✅ 提取完成（" + best_name + "，" + str(best_len) + " 字）")
 
-                        if not text_input.strip():
-                            st.error("❌ 无法从 PDF 中提取文字，请尝试其他提取方式")
+                        # 调试面板
+                        with st.expander("🔧 调试：各方法提取结果"):
+                            for name, (txt, clen) in sorted(all_results.items(), key=lambda x: -x[1][1]):
+                                st.caption(name + ": " + str(clen) + " 字")
+                            st.text_area("当前文本", value=text_input or "(无)", height=200, key="raw_text_view", label_visibility="collapsed")
 
-                        # ---- 调试面板 ----
-                        _total = sum((v for v in strategy_info.values() if isinstance(v, int)), 0)
-                        with st.expander(f"🔧 调试：查看原始提取文本（共 {_total} 字）"):
-                            st.text_area("原始文本", value=text_input or "(无内容)", height=250, key="raw_text_view", label_visibility="collapsed")
-                            if strategy_info:
-                                _parts = " ".join([f"{k}:{v}字" for k,v in strategy_info.items() if isinstance(v,int)])
-                                st.caption(f"提取结果: {_parts}")
-                            st.caption("若文本混乱，请尝试其他提取方式")
-
-                        # 对 OCR 文本规范化（去除 CJK 间隙空格等）
+                        # 规范化
                         if 'normalize_ocr_text' in globals():
                             text_input = normalize_ocr_text(text_input)
                     else:

@@ -10,6 +10,69 @@ import time
 import pandas as pd
 import requests
 from pathlib import Path
+import io
+import sys
+
+# ===== PDF 扫描件识别 =====
+def extract_text_from_pdf(file_bytes, filename=""):
+    """
+    从 PDF 中提取文字。
+    优先使用 pdfplumber 直接提取文字；
+    若提取文字少于 100 字符（疑似扫描件），则用 pymupdf 渲染页面 + pytesseract OCR。
+    返回提取到的纯文本，是否为扫描件。
+    """
+    import tempfile, os
+    text = ""
+    is_scanned = False
+
+    # ---- 方案1：pdfplumber 直接提取 ----
+    try:
+        import pdfplumber
+        with pdfplumber.open(io.BytesIO(file_bytes)) as pdf:
+            page_texts = []
+            for page in pdf.pages:
+                t = page.extract_text() or ""
+                page_texts.append(t)
+            text = "\n".join(page_texts)
+    except Exception:
+        pass
+
+    # ---- 判断是否为扫描件（提取文字过少） ----
+    if len(text.strip()) < 100:
+        is_scanned = True
+        text = ""
+        tmp_path = None
+        try:
+            import fitz
+            import pytesseract
+            from PIL import Image
+
+            # 写入临时文件（fitz.open 不支持 BytesIO）
+            tmp = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+            tmp.write(file_bytes)
+            tmp.close()
+            tmp_path = tmp.name
+
+            with fitz.open(tmp_path) as doc:
+                ocr_pages = []
+                for page_num, page in enumerate(doc):
+                    mat = fitz.Matrix(2, 2)   # 2x zoom ≈ 144 DPI，兼顾速度与质量
+                    pix = page.get_pixmap(matrix=mat)
+                    img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                    ocr_text = pytesseract.image_to_string(
+                        img, lang='chi_sim+eng', config='--psm 6'
+                    )
+                    if ocr_text.strip():
+                        ocr_pages.append(ocr_text.strip())
+                text = "\n".join(ocr_pages)
+        except Exception as e:
+            sys.stderr.write(f"OCR failed: {e}\n")
+        finally:
+            if tmp_path and os.path.exists(tmp_path):
+                os.unlink(tmp_path)
+
+    return text, is_scanned
+
 
 st.set_page_config(
     page_title="论文评价系统 | 哈医大人事处",
@@ -170,15 +233,35 @@ def main():
                 placeholder="支持格式示例：\n1. 张三, 李四. 论文标题[J]. 期刊名, 2024, 35(2): 123-130.（第一作者）\n2. 王五, 等. 论文标题[J]. 期刊名, 2023.（通讯作者）\n3. [1] 赵六. 论文标题[J]. 期刊名, 2022.（第一作者）"
             )
         else:
-            uploaded = st.file_uploader("上传简历文件", type=['txt', 'docx', 'pdf'])
+            uploaded = st.file_uploader(
+                "上传简历文件",
+                type=['txt', 'docx', 'pdf'],
+                help="支持 txt / docx / pdf（含扫描件）"
+            )
             if uploaded:
                 try:
+                    file_bytes = uploaded.read()
                     if uploaded.name.endswith('.docx'):
                         from docx import Document
-                        doc = Document(uploaded)
+                        import tempfile, os
+                        # docx 需要临时文件
+                        tmp = tempfile.NamedTemporaryFile(suffix='.docx', delete=False)
+                        tmp.write(file_bytes)
+                        tmp.close()
+                        doc = Document(tmp.name)
+                        os.unlink(tmp.name)
                         text_input = '\n'.join([p.text for p in doc.paragraphs if p.text.strip()])
+                    elif uploaded.name.endswith('.pdf'):
+                        with st.spinner("🔍 正在识别 PDF，请稍候（扫描件约需 10-30 秒）..."):
+                            text_input, is_scanned = extract_text_from_pdf(file_bytes, uploaded.name)
+                        if is_scanned:
+                            st.success("✅ PDF 已作为扫描件完成 OCR 文字识别")
+                        else:
+                            st.success("✅ PDF 文字提取完成")
+                        if not text_input.strip():
+                            st.error("❌ 无法从 PDF 中提取文字，请确认文件内容")
                     else:
-                        text_input = uploaded.read().decode('utf-8', errors='ignore')
+                        text_input = file_bytes.decode('utf-8', errors='ignore')
                 except Exception as e:
                     st.error(f"读取失败: {e}")
 

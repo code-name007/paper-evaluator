@@ -35,82 +35,119 @@ def preprocess_for_ocr(img):
     return sharpened2
 
 
-def extract_text_from_pdf(file_bytes, filename="", dpi=300):
+# ===== PDF 文字提取（三策略并行，自动选最优） =====
+def extract_text_from_pdf_v2(file_bytes, filename=""):
     """
-    从 PDF 中提取文字。
-    优先使用 pdfplumber 直接提取文字；
-    若提取文字少于 100 字符（疑似扫描件），则用 pymupdf 渲染 + pytesseract OCR。
+    从 PDF 中提取文字，三策略并行，取最优结果：
+    策略1：pdfplumber（原生，适合简单排版）
+    策略2：PyMuPDF 直接提取（适合复杂排版、多栏）
+    策略3：OCR（扫描件 / 前两者失败时）
 
-    增强版：
-    - 可配置 DPI（默认 300）
-    - 图像预处理（灰度+对比度+锐化）
-    - PSM 3（自动分栏）
-    - 多次识别提升质量
+    返回：(最佳文本, 是否为扫描件, 各策略文本长度)
     """
-    import tempfile, os
-    text = ""
-    is_scanned = False
+    import tempfile, os, io
 
-    # ---- 方案1：pdfplumber 直接提取 ----
+    strategies = {}  # name -> (text, char_count)
+
+    # ---- 策略1：pdfplumber ----
     try:
         import pdfplumber
         with pdfplumber.open(io.BytesIO(file_bytes)) as pdf:
-            page_texts = []
+            parts = []
             for page in pdf.pages:
                 t = page.extract_text() or ""
-                page_texts.append(t)
-            text = "\n".join(page_texts)
-    except Exception:
-        pass
+                if t.strip():
+                    parts.append(t)
+        txt = "\n".join(parts)
+        strategies["pdfplumber"] = (txt, len(txt.strip()))
+    except Exception as e:
+        strategies["pdfplumber"] = ("", 0)
 
-    # ---- 判断是否为扫描件（提取文字过少） ----
-    if len(text.strip()) < 100:
+    # ---- 策略2：PyMuPDF 直接提取（更好的排版处理）----
+    tmp_path = None
+    try:
+        import fitz
+        tmp = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+        tmp.write(file_bytes)
+        tmp.close()
+        tmp_path = tmp.name
+
+        with fitz.open(tmp_path) as doc:
+            parts = []
+            for page in doc:
+                # PyMuPDF 的 extractUSD 会保留阅读顺序，比 extract_text 更准
+                blocks = page.get_text("blocks")
+                # 按 (x0, y0) 排序：从上到下、从左到右
+                blocks.sort(key=lambda b: (round(b[1] / 20) * 20, b[0]))
+                page_text = ""
+                for block in blocks:
+                    block_text = block[4].strip()
+                    if block_text:
+                        page_text += block_text + "\n"
+                if page_text.strip():
+                    parts.append(page_text)
+        txt = "\n".join(parts)
+        strategies["pymupdf"] = (txt, len(txt.strip()))
+    except Exception as e:
+        strategies["pymupdf"] = ("", 0)
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+
+    # ---- 选择最佳策略 ----
+    # 优先：字符数 > 50 且最连贯的策略
+    best_name = None
+    best_len = 0
+    best_text = ""
+
+    for name, (txt, clen) in strategies.items():
+        if clen > best_len:
+            best_len = clen
+            best_text = txt
+            best_name = name
+
+    # ---- 策略3：OCR（当前两者都失败或字符数太少时）----
+    is_scanned = False
+    if best_len < 200:
         is_scanned = True
-        text = ""
         tmp_path = None
         try:
-            import fitz
-            import pytesseract
-            from PIL import Image
+            import fitz, pytesseract
+            from PIL import Image, ImageEnhance, ImageFilter
 
-            # 写入临时文件
             tmp = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
             tmp.write(file_bytes)
             tmp.close()
             tmp_path = tmp.name
 
-            # DPI 计算：PDF base=72，缩放因子 = dpi/72
-            scale = dpi / 72.0
-            mat = fitz.Matrix(scale, scale)
-
             with fitz.open(tmp_path) as doc:
                 ocr_pages = []
-                for page_num, page in enumerate(doc):
+                for page in doc:
+                    # 300 DPI
+                    mat = fitz.Matrix(300/72, 300/72)
                     pix = page.get_pixmap(matrix=mat)
                     img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-
-                    # 图像预处理
-                    img_processed = preprocess_for_ocr(img)
-
-                    # OCR：PSM 3 = 自动分栏检测
+                    # 预处理
+                    gray = img.convert('L')
+                    enh = ImageEnhance.Contrast(gray)
+                    img_p = enh.enhance(1.5).filter(ImageFilter.SHARPEN)
+                    # OCR
                     ocr_text = pytesseract.image_to_string(
-                        img_processed,
-                        lang='chi_sim+eng',
-                        config='--psm 3 --oem 3'
+                        img_p, lang='chi_sim+eng', config='--psm 3 --oem 3'
                     )
-
                     if ocr_text.strip():
                         ocr_pages.append(ocr_text.strip())
-
-                text = "\n".join(ocr_pages)
-
+                best_text = "\n".join(ocr_pages)
+                best_name = "ocr"
         except Exception as e:
             sys.stderr.write(f"OCR failed: {e}\n")
         finally:
             if tmp_path and os.path.exists(tmp_path):
                 os.unlink(tmp_path)
 
-    return text, is_scanned
+    return best_text, is_scanned, {k: v[1] for k, v in strategies.items()}
+
+
 
 st.set_page_config(
     page_title="论文评价系统 | 哈医大人事处",
@@ -527,7 +564,7 @@ def main():
                         text_input = '\n'.join([p.text for p in doc.paragraphs if p.text.strip()])
                     elif uploaded.name.endswith('.pdf'):
                         with st.spinner("🔍 正在识别 PDF，请稍候（扫描件约需 10-30 秒）..."):
-                            text_input, is_scanned = extract_text_from_pdf(file_bytes, uploaded.name)
+                            text_input, is_scanned, strategy_info = extract_text_from_pdf_v2(file_bytes, uploaded.name)
                         if is_scanned:
                             st.success("✅ PDF 已作为扫描件完成 OCR 文字识别")
                         else:
@@ -538,6 +575,11 @@ def main():
                         # ---- 调试面板：查看原始 OCR 文本 ----
                         with st.expander("🔧 调试：查看原始提取文本"):
                             st.text_area("原始文本", value=text_input or "(无内容)", height=200, key="raw_text_view", label_visibility="collapsed")
+                            _pp = strategy_info.get('pdfplumber', 0)
+                            _pm = strategy_info.get('pymupdf', 0)
+                            _oc = strategy_info.get('ocr', 0)
+                            _bs = max(strategy_info, key=strategy_info.get) if strategy_info and max(strategy_info.values() or [0]) > 0 else '无'
+                            st.caption(f"提取策略:{_bs} | pdfplumber:{_pp}字 pymupdf:{_pm}字 ocr:{_oc}字")
                             st.caption("若文本混乱或缺失，说明 OCR 识别质量低，请尝试上传文本型 PDF 或更高质量的扫描件")
 
                         # 对 OCR 文本规范化（去除 CJK 间隙空格等）

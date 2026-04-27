@@ -1,0 +1,4846 @@
+{
+  "cell": {
+    "name": "CELL",
+    "issn": "0092-8674",
+    "eissn": "1097-4172",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "0092-8674": {
+    "name": "CELL",
+    "issn": "0092-8674",
+    "eissn": "1097-4172",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "1097-4172": {
+    "name": "CELL",
+    "issn": "0092-8674",
+    "eissn": "1097-4172",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "jama-journaloftheamericanmedicalassociation": {
+    "name": "JAMA-JOURNAL OF THE AMERICAN MEDICAL ASSOCIATION",
+    "issn": "0098-7484",
+    "eissn": "1538-3598",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "0098-7484": {
+    "name": "JAMA-JOURNAL OF THE AMERICAN MEDICAL ASSOCIATION",
+    "issn": "0098-7484",
+    "eissn": "1538-3598",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "1538-3598": {
+    "name": "JAMA-JOURNAL OF THE AMERICAN MEDICAL ASSOCIATION",
+    "issn": "0098-7484",
+    "eissn": "1538-3598",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "lancet": {
+    "name": "LANCET",
+    "issn": "0140-6736",
+    "eissn": "1474-547X",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "0140-6736": {
+    "name": "LANCET",
+    "issn": "0140-6736",
+    "eissn": "1474-547X",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "1474-547X": {
+    "name": "LANCET",
+    "issn": "0140-6736",
+    "eissn": "1474-547X",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "nature": {
+    "name": "NATURE",
+    "issn": "0028-0836",
+    "eissn": "1476-4687",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "0028-0836": {
+    "name": "NATURE",
+    "issn": "0028-0836",
+    "eissn": "1476-4687",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "1476-4687": {
+    "name": "NATURE",
+    "issn": "0028-0836",
+    "eissn": "1476-4687",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "newenglandjournalofmedicine": {
+    "name": "NEW ENGLAND JOURNAL OF MEDICINE",
+    "issn": "0028-4793",
+    "eissn": "1533-4406",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "0028-4793": {
+    "name": "NEW ENGLAND JOURNAL OF MEDICINE",
+    "issn": "0028-4793",
+    "eissn": "1533-4406",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "1533-4406": {
+    "name": "NEW ENGLAND JOURNAL OF MEDICINE",
+    "issn": "0028-4793",
+    "eissn": "1533-4406",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "science": {
+    "name": "SCIENCE",
+    "issn": "0036-8075",
+    "eissn": "1095-9203",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "0036-8075": {
+    "name": "SCIENCE",
+    "issn": "0036-8075",
+    "eissn": "1095-9203",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "1095-9203": {
+    "name": "SCIENCE",
+    "issn": "0036-8075",
+    "eissn": "1095-9203",
+    "tier": "高水平1类",
+    "tier_level": 0
+  },
+  "annalsofinternalmedicine": {
+    "name": "ANNALS OF INTERNAL MEDICINE",
+    "issn": "0003-4819",
+    "eissn": "1539-3704",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "0003-4819": {
+    "name": "ANNALS OF INTERNAL MEDICINE",
+    "issn": "0003-4819",
+    "eissn": "1539-3704",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1539-3704": {
+    "name": "ANNALS OF INTERNAL MEDICINE",
+    "issn": "0003-4819",
+    "eissn": "1539-3704",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "britishmedicaljournal": {
+    "name": "BRITISH MEDICAL JOURNAL",
+    "issn": "1756-1833",
+    "eissn": "1756-1833",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1756-1833": {
+    "name": "BRITISH MEDICAL JOURNAL",
+    "issn": "1756-1833",
+    "eissn": "1756-1833",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "cancercell": {
+    "name": "CANCER CELL",
+    "issn": "1535-6108",
+    "eissn": "1878-3686",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1535-6108": {
+    "name": "CANCER CELL",
+    "issn": "1535-6108",
+    "eissn": "1878-3686",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1878-3686": {
+    "name": "CANCER CELL",
+    "issn": "1535-6108",
+    "eissn": "1878-3686",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "cancerdiscovery": {
+    "name": "CANCER DISCOVERY",
+    "issn": "2159-8274",
+    "eissn": "2159-8290",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "2159-8274": {
+    "name": "CANCER DISCOVERY",
+    "issn": "2159-8274",
+    "eissn": "2159-8290",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "2159-8290": {
+    "name": "CANCER DISCOVERY",
+    "issn": "2159-8274",
+    "eissn": "2159-8290",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "cellmetabolism": {
+    "name": "CELL METABOLISM",
+    "issn": "1550-4131",
+    "eissn": "1932-7420",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1550-4131": {
+    "name": "CELL METABOLISM",
+    "issn": "1550-4131",
+    "eissn": "1932-7420",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1932-7420": {
+    "name": "CELL METABOLISM",
+    "issn": "1550-4131",
+    "eissn": "1932-7420",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "cellresearch": {
+    "name": "CELL RESEARCH",
+    "issn": "1001-0602",
+    "eissn": "1748-7838",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1001-0602": {
+    "name": "CELL RESEARCH",
+    "issn": "1001-0602",
+    "eissn": "1748-7838",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1748-7838": {
+    "name": "CELL RESEARCH",
+    "issn": "1001-0602",
+    "eissn": "1748-7838",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "cellstemcell": {
+    "name": "CELL STEM CELL",
+    "issn": "1934-5909",
+    "eissn": "1875-9777",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1934-5909": {
+    "name": "CELL STEM CELL",
+    "issn": "1934-5909",
+    "eissn": "1875-9777",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1875-9777": {
+    "name": "CELL STEM CELL",
+    "issn": "1934-5909",
+    "eissn": "1875-9777",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "circulation": {
+    "name": "CIRCULATION",
+    "issn": "0009-7322",
+    "eissn": "1524-4539",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "0009-7322": {
+    "name": "CIRCULATION",
+    "issn": "0009-7322",
+    "eissn": "1524-4539",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1524-4539": {
+    "name": "CIRCULATION",
+    "issn": "0009-7322",
+    "eissn": "1524-4539",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "europeanheartjournal": {
+    "name": "EUROPEAN HEART JOURNAL",
+    "issn": "0195-668X",
+    "eissn": "1522-9645",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "0195-668X": {
+    "name": "EUROPEAN HEART JOURNAL",
+    "issn": "0195-668X",
+    "eissn": "1522-9645",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1522-9645": {
+    "name": "EUROPEAN HEART JOURNAL",
+    "issn": "0195-668X",
+    "eissn": "1522-9645",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "immunity": {
+    "name": "IMMUNITY",
+    "issn": "1074-7613",
+    "eissn": "1097-4180",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1074-7613": {
+    "name": "IMMUNITY",
+    "issn": "1074-7613",
+    "eissn": "1097-4180",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1097-4180": {
+    "name": "IMMUNITY",
+    "issn": "1074-7613",
+    "eissn": "1097-4180",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "jamaoncology": {
+    "name": "JAMA ONCOLOGY",
+    "issn": "2374-2437",
+    "eissn": "2374-2445",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "2374-2437": {
+    "name": "JAMA ONCOLOGY",
+    "issn": "2374-2437",
+    "eissn": "2374-2445",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "2374-2445": {
+    "name": "JAMA ONCOLOGY",
+    "issn": "2374-2437",
+    "eissn": "2374-2445",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "journalofclinicaloncology": {
+    "name": "JOURNAL OF CLINICAL ONCOLOGY",
+    "issn": "0732-183X",
+    "eissn": "1527-7755",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "0732-183X": {
+    "name": "JOURNAL OF CLINICAL ONCOLOGY",
+    "issn": "0732-183X",
+    "eissn": "1527-7755",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1527-7755": {
+    "name": "JOURNAL OF CLINICAL ONCOLOGY",
+    "issn": "0732-183X",
+    "eissn": "1527-7755",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "journaloftheamericancollegeofcardiology": {
+    "name": "JOURNAL OF THE AMERICAN COLLEGE OF CARDIOLOGY",
+    "issn": "0735-1097",
+    "eissn": "1558-3597",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "0735-1097": {
+    "name": "JOURNAL OF THE AMERICAN COLLEGE OF CARDIOLOGY",
+    "issn": "0735-1097",
+    "eissn": "1558-3597",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1558-3597": {
+    "name": "JOURNAL OF THE AMERICAN COLLEGE OF CARDIOLOGY",
+    "issn": "0735-1097",
+    "eissn": "1558-3597",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "lancetdiabetes&endocrinology": {
+    "name": "LANCET DIABETES & ENDOCRINOLOGY",
+    "issn": "2213-8587",
+    "eissn": "2213-8595",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "2213-8587": {
+    "name": "LANCET DIABETES & ENDOCRINOLOGY",
+    "issn": "2213-8587",
+    "eissn": "2213-8595",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "2213-8595": {
+    "name": "LANCET DIABETES & ENDOCRINOLOGY",
+    "issn": "2213-8587",
+    "eissn": "2213-8595",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "lancetinfectiousdiseases": {
+    "name": "LANCET INFECTIOUS DISEASES",
+    "issn": "1473-3099",
+    "eissn": "1474-4457",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1473-3099": {
+    "name": "LANCET INFECTIOUS DISEASES",
+    "issn": "1473-3099",
+    "eissn": "1474-4457",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1474-4457": {
+    "name": "LANCET INFECTIOUS DISEASES",
+    "issn": "1473-3099",
+    "eissn": "1474-4457",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "lancetneurology": {
+    "name": "LANCET NEUROLOGY",
+    "issn": "1474-4422",
+    "eissn": "1474-4465",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1474-4422": {
+    "name": "LANCET NEUROLOGY",
+    "issn": "1474-4422",
+    "eissn": "1474-4465",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1474-4465": {
+    "name": "LANCET NEUROLOGY",
+    "issn": "1474-4422",
+    "eissn": "1474-4465",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "lancetoncology": {
+    "name": "LANCET ONCOLOGY",
+    "issn": "1470-2045",
+    "eissn": "1474-5488",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1470-2045": {
+    "name": "LANCET ONCOLOGY",
+    "issn": "1470-2045",
+    "eissn": "1474-5488",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1474-5488": {
+    "name": "LANCET ONCOLOGY",
+    "issn": "1470-2045",
+    "eissn": "1474-5488",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "lancetrespiratorymedicine": {
+    "name": "LANCET RESPIRATORY MEDICINE",
+    "issn": "2213-2600",
+    "eissn": "",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "2213-2600": {
+    "name": "LANCET RESPIRATORY MEDICINE",
+    "issn": "2213-2600",
+    "eissn": "",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "naturebiotechnology": {
+    "name": "NATURE BIOTECHNOLOGY",
+    "issn": "1087-0156",
+    "eissn": "1546-1696",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1087-0156": {
+    "name": "NATURE BIOTECHNOLOGY",
+    "issn": "1087-0156",
+    "eissn": "1546-1696",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1546-1696": {
+    "name": "NATURE BIOTECHNOLOGY",
+    "issn": "1087-0156",
+    "eissn": "1546-1696",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "naturegenetics": {
+    "name": "NATURE GENETICS",
+    "issn": "1061-4036",
+    "eissn": "1546-1718",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1061-4036": {
+    "name": "NATURE GENETICS",
+    "issn": "1061-4036",
+    "eissn": "1546-1718",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1546-1718": {
+    "name": "NATURE GENETICS",
+    "issn": "1061-4036",
+    "eissn": "1546-1718",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "natureimmunology": {
+    "name": "NATURE IMMUNOLOGY",
+    "issn": "1529-2908",
+    "eissn": "1529-2916",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1529-2908": {
+    "name": "NATURE IMMUNOLOGY",
+    "issn": "1529-2908",
+    "eissn": "1529-2916",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1529-2916": {
+    "name": "NATURE IMMUNOLOGY",
+    "issn": "1529-2908",
+    "eissn": "1529-2916",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "naturemedicine": {
+    "name": "NATURE MEDICINE",
+    "issn": "1078-8956",
+    "eissn": "1546-170X",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1078-8956": {
+    "name": "NATURE MEDICINE",
+    "issn": "1078-8956",
+    "eissn": "1546-170X",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1546-170X": {
+    "name": "NATURE MEDICINE",
+    "issn": "1078-8956",
+    "eissn": "1546-170X",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "naturemethods": {
+    "name": "NATURE METHODS",
+    "issn": "1548-7091",
+    "eissn": "1548-7105",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1548-7091": {
+    "name": "NATURE METHODS",
+    "issn": "1548-7091",
+    "eissn": "1548-7105",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1548-7105": {
+    "name": "NATURE METHODS",
+    "issn": "1548-7091",
+    "eissn": "1548-7105",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "naturenanotechnology": {
+    "name": "NATURE NANOTECHNOLOGY",
+    "issn": "1748-3387",
+    "eissn": "1748-3395",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1748-3387": {
+    "name": "NATURE NANOTECHNOLOGY",
+    "issn": "1748-3387",
+    "eissn": "1748-3395",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1748-3395": {
+    "name": "NATURE NANOTECHNOLOGY",
+    "issn": "1748-3387",
+    "eissn": "1748-3395",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "natureneuroscience": {
+    "name": "NATURE NEUROSCIENCE",
+    "issn": "1097-6256",
+    "eissn": "1546-1726",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1097-6256": {
+    "name": "NATURE NEUROSCIENCE",
+    "issn": "1097-6256",
+    "eissn": "1546-1726",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "1546-1726": {
+    "name": "NATURE NEUROSCIENCE",
+    "issn": "1097-6256",
+    "eissn": "1546-1726",
+    "tier": "高水平2类",
+    "tier_level": 1
+  },
+  "actaneuropathologica": {
+    "name": "ACTA NEUROPATHOLOGICA",
+    "issn": "0001-6322",
+    "eissn": "1432-0533",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0001-6322": {
+    "name": "ACTA NEUROPATHOLOGICA",
+    "issn": "0001-6322",
+    "eissn": "1432-0533",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1432-0533": {
+    "name": "ACTA NEUROPATHOLOGICA",
+    "issn": "0001-6322",
+    "eissn": "1432-0533",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "advancedfunctionalmaterials": {
+    "name": "ADVANCED FUNCTIONAL MATERIALS",
+    "issn": "1616-301X",
+    "eissn": "1616-3028",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1616-301X": {
+    "name": "ADVANCED FUNCTIONAL MATERIALS",
+    "issn": "1616-301X",
+    "eissn": "1616-3028",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1616-3028": {
+    "name": "ADVANCED FUNCTIONAL MATERIALS",
+    "issn": "1616-301X",
+    "eissn": "1616-3028",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "advancedmaterials": {
+    "name": "ADVANCED MATERIALS",
+    "issn": "0935-9648",
+    "eissn": "1521-4095",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0935-9648": {
+    "name": "ADVANCED MATERIALS",
+    "issn": "0935-9648",
+    "eissn": "1521-4095",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1521-4095": {
+    "name": "ADVANCED MATERIALS",
+    "issn": "0935-9648",
+    "eissn": "1521-4095",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "americanjournalofrespiratoryandcriticalcaremedicine": {
+    "name": "AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE",
+    "issn": "1073-449X",
+    "eissn": "1535-4970",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1073-449X": {
+    "name": "AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE",
+    "issn": "1073-449X",
+    "eissn": "1535-4970",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1535-4970": {
+    "name": "AMERICAN JOURNAL OF RESPIRATORY AND CRITICAL CARE MEDICINE",
+    "issn": "1073-449X",
+    "eissn": "1535-4970",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "angewandtechemie-internationaledition": {
+    "name": "ANGEWANDTE CHEMIE-INTERNATIONAL EDITION",
+    "issn": "1433-7851",
+    "eissn": "1521-3773",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1433-7851": {
+    "name": "ANGEWANDTE CHEMIE-INTERNATIONAL EDITION",
+    "issn": "1433-7851",
+    "eissn": "1521-3773",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1521-3773": {
+    "name": "ANGEWANDTE CHEMIE-INTERNATIONAL EDITION",
+    "issn": "1433-7851",
+    "eissn": "1521-3773",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "annalsoftherheumaticdiseases": {
+    "name": "ANNALS OF THE RHEUMATIC DISEASES",
+    "issn": "0003-4967",
+    "eissn": "1468-2060",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0003-4967": {
+    "name": "ANNALS OF THE RHEUMATIC DISEASES",
+    "issn": "0003-4967",
+    "eissn": "1468-2060",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1468-2060": {
+    "name": "ANNALS OF THE RHEUMATIC DISEASES",
+    "issn": "0003-4967",
+    "eissn": "1468-2060",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "blood": {
+    "name": "BLOOD",
+    "issn": "0006-4971",
+    "eissn": "1528-0020",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0006-4971": {
+    "name": "BLOOD",
+    "issn": "0006-4971",
+    "eissn": "1528-0020",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1528-0020": {
+    "name": "BLOOD",
+    "issn": "0006-4971",
+    "eissn": "1528-0020",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "boneresearch": {
+    "name": "BONE RESEARCH",
+    "issn": "2095-4700",
+    "eissn": "2095-6231",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2095-4700": {
+    "name": "BONE RESEARCH",
+    "issn": "2095-4700",
+    "eissn": "2095-6231",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2095-6231": {
+    "name": "BONE RESEARCH",
+    "issn": "2095-4700",
+    "eissn": "2095-6231",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "brain": {
+    "name": "BRAIN",
+    "issn": "0006-8950",
+    "eissn": "1460-2156",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0006-8950": {
+    "name": "BRAIN",
+    "issn": "0006-8950",
+    "eissn": "1460-2156",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1460-2156": {
+    "name": "BRAIN",
+    "issn": "0006-8950",
+    "eissn": "1460-2156",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "britishjournalofsportsmedicine": {
+    "name": "BRITISH JOURNAL OF SPORTS MEDICINE",
+    "issn": "0306-3674",
+    "eissn": "1473-0480",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0306-3674": {
+    "name": "BRITISH JOURNAL OF SPORTS MEDICINE",
+    "issn": "0306-3674",
+    "eissn": "1473-0480",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1473-0480": {
+    "name": "BRITISH JOURNAL OF SPORTS MEDICINE",
+    "issn": "0306-3674",
+    "eissn": "1473-0480",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "cellhost&microbe": {
+    "name": "CELL HOST & MICROBE",
+    "issn": "1931-3128",
+    "eissn": "1934-6069",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1931-3128": {
+    "name": "CELL HOST & MICROBE",
+    "issn": "1931-3128",
+    "eissn": "1934-6069",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1934-6069": {
+    "name": "CELL HOST & MICROBE",
+    "issn": "1931-3128",
+    "eissn": "1934-6069",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "circulationresearch": {
+    "name": "CIRCULATION RESEARCH",
+    "issn": "0009-7330",
+    "eissn": "1524-4571",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0009-7330": {
+    "name": "CIRCULATION RESEARCH",
+    "issn": "0009-7330",
+    "eissn": "1524-4571",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1524-4571": {
+    "name": "CIRCULATION RESEARCH",
+    "issn": "0009-7330",
+    "eissn": "1524-4571",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "developmentalcell": {
+    "name": "DEVELOPMENTAL CELL",
+    "issn": "1534-5807",
+    "eissn": "1878-1551",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1534-5807": {
+    "name": "DEVELOPMENTAL CELL",
+    "issn": "1534-5807",
+    "eissn": "1878-1551",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1878-1551": {
+    "name": "DEVELOPMENTAL CELL",
+    "issn": "1534-5807",
+    "eissn": "1878-1551",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "diabetescare": {
+    "name": "DIABETES CARE",
+    "issn": "0149-5992",
+    "eissn": "1935-5548",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0149-5992": {
+    "name": "DIABETES CARE",
+    "issn": "0149-5992",
+    "eissn": "1935-5548",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1935-5548": {
+    "name": "DIABETES CARE",
+    "issn": "0149-5992",
+    "eissn": "1935-5548",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "embojournal": {
+    "name": "EMBO JOURNAL",
+    "issn": "0261-4189",
+    "eissn": "1460-2075",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0261-4189": {
+    "name": "EMBO JOURNAL",
+    "issn": "0261-4189",
+    "eissn": "1460-2075",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1460-2075": {
+    "name": "EMBO JOURNAL",
+    "issn": "0261-4189",
+    "eissn": "1460-2075",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "europeanjournalofheartfailure": {
+    "name": "EUROPEAN JOURNAL OF HEART FAILURE",
+    "issn": "1388-9842",
+    "eissn": "1879-0844",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1388-9842": {
+    "name": "EUROPEAN JOURNAL OF HEART FAILURE",
+    "issn": "1388-9842",
+    "eissn": "1879-0844",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1879-0844": {
+    "name": "EUROPEAN JOURNAL OF HEART FAILURE",
+    "issn": "1388-9842",
+    "eissn": "1879-0844",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "europeanrespiratoryjournal": {
+    "name": "EUROPEAN RESPIRATORY JOURNAL",
+    "issn": "0903-1936",
+    "eissn": "1399-3003",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0903-1936": {
+    "name": "EUROPEAN RESPIRATORY JOURNAL",
+    "issn": "0903-1936",
+    "eissn": "1399-3003",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1399-3003": {
+    "name": "EUROPEAN RESPIRATORY JOURNAL",
+    "issn": "0903-1936",
+    "eissn": "1399-3003",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "europeanurology": {
+    "name": "EUROPEAN UROLOGY",
+    "issn": "0302-2838",
+    "eissn": "1873-7560",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0302-2838": {
+    "name": "EUROPEAN UROLOGY",
+    "issn": "0302-2838",
+    "eissn": "1873-7560",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1873-7560": {
+    "name": "EUROPEAN UROLOGY",
+    "issn": "0302-2838",
+    "eissn": "1873-7560",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "gastroenterology": {
+    "name": "GASTROENTEROLOGY",
+    "issn": "0016-5085",
+    "eissn": "1528-0012",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0016-5085": {
+    "name": "GASTROENTEROLOGY",
+    "issn": "0016-5085",
+    "eissn": "1528-0012",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1528-0012": {
+    "name": "GASTROENTEROLOGY",
+    "issn": "0016-5085",
+    "eissn": "1528-0012",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "genomebiology": {
+    "name": "GENOME BIOLOGY",
+    "issn": "1474-760X",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1474-760X": {
+    "name": "GENOME BIOLOGY",
+    "issn": "1474-760X",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "gut": {
+    "name": "GUT",
+    "issn": "0017-5749",
+    "eissn": "1468-3288",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0017-5749": {
+    "name": "GUT",
+    "issn": "0017-5749",
+    "eissn": "1468-3288",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1468-3288": {
+    "name": "GUT",
+    "issn": "0017-5749",
+    "eissn": "1468-3288",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "informationfusion": {
+    "name": "INFORMATION FUSION",
+    "issn": "1566-2535",
+    "eissn": "1872-6305",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1566-2535": {
+    "name": "INFORMATION FUSION",
+    "issn": "1566-2535",
+    "eissn": "1872-6305",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1872-6305": {
+    "name": "INFORMATION FUSION",
+    "issn": "1566-2535",
+    "eissn": "1872-6305",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "intensivecaremedicine": {
+    "name": "INTENSIVE CARE MEDICINE",
+    "issn": "0342-4642",
+    "eissn": "1432-1238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0342-4642": {
+    "name": "INTENSIVE CARE MEDICINE",
+    "issn": "0342-4642",
+    "eissn": "1432-1238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1432-1238": {
+    "name": "INTENSIVE CARE MEDICINE",
+    "issn": "0342-4642",
+    "eissn": "1432-1238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "jamacardiology": {
+    "name": "JAMA CARDIOLOGY",
+    "issn": "2380-6583",
+    "eissn": "2380-6591",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2380-6583": {
+    "name": "JAMA CARDIOLOGY",
+    "issn": "2380-6583",
+    "eissn": "2380-6591",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2380-6591": {
+    "name": "JAMA CARDIOLOGY",
+    "issn": "2380-6583",
+    "eissn": "2380-6591",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "jamainternalmedicine": {
+    "name": "JAMA INTERNAL MEDICINE",
+    "issn": "2168-6106",
+    "eissn": "2168-6114",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-6106": {
+    "name": "JAMA INTERNAL MEDICINE",
+    "issn": "2168-6106",
+    "eissn": "2168-6114",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-6114": {
+    "name": "JAMA INTERNAL MEDICINE",
+    "issn": "2168-6106",
+    "eissn": "2168-6114",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "jamaneurology": {
+    "name": "JAMA NEUROLOGY",
+    "issn": "2168-6149",
+    "eissn": "2168-6157",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-6149": {
+    "name": "JAMA NEUROLOGY",
+    "issn": "2168-6149",
+    "eissn": "2168-6157",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-6157": {
+    "name": "JAMA NEUROLOGY",
+    "issn": "2168-6149",
+    "eissn": "2168-6157",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "jamapediatrics": {
+    "name": "JAMA PEDIATRICS",
+    "issn": "2168-6203",
+    "eissn": "2168-6211",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-6203": {
+    "name": "JAMA PEDIATRICS",
+    "issn": "2168-6203",
+    "eissn": "2168-6211",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-6211": {
+    "name": "JAMA PEDIATRICS",
+    "issn": "2168-6203",
+    "eissn": "2168-6211",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "jamapsychiatry": {
+    "name": "JAMA PSYCHIATRY",
+    "issn": "2168-622X",
+    "eissn": "2168-6238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-622X": {
+    "name": "JAMA PSYCHIATRY",
+    "issn": "2168-622X",
+    "eissn": "2168-6238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2168-6238": {
+    "name": "JAMA PSYCHIATRY",
+    "issn": "2168-622X",
+    "eissn": "2168-6238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "jnci-journalofthenationalcancerinstitute": {
+    "name": "JNCI-JOURNAL OF THE NATIONAL CANCER INSTITUTE",
+    "issn": "0027-8874",
+    "eissn": "1460-2105",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0027-8874": {
+    "name": "JNCI-JOURNAL OF THE NATIONAL CANCER INSTITUTE",
+    "issn": "0027-8874",
+    "eissn": "1460-2105",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1460-2105": {
+    "name": "JNCI-JOURNAL OF THE NATIONAL CANCER INSTITUTE",
+    "issn": "0027-8874",
+    "eissn": "1460-2105",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "journalofallergyandclinicalimmunology": {
+    "name": "JOURNAL OF ALLERGY AND CLINICAL IMMUNOLOGY",
+    "issn": "0091-6749",
+    "eissn": "1097-6825",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0091-6749": {
+    "name": "JOURNAL OF ALLERGY AND CLINICAL IMMUNOLOGY",
+    "issn": "0091-6749",
+    "eissn": "1097-6825",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1097-6825": {
+    "name": "JOURNAL OF ALLERGY AND CLINICAL IMMUNOLOGY",
+    "issn": "0091-6749",
+    "eissn": "1097-6825",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "journalofclinicalinvestigation": {
+    "name": "JOURNAL OF CLINICAL INVESTIGATION",
+    "issn": "0021-9738",
+    "eissn": "1558-8238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0021-9738": {
+    "name": "JOURNAL OF CLINICAL INVESTIGATION",
+    "issn": "0021-9738",
+    "eissn": "1558-8238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1558-8238": {
+    "name": "JOURNAL OF CLINICAL INVESTIGATION",
+    "issn": "0021-9738",
+    "eissn": "1558-8238",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "journalofexperimentalmedicine": {
+    "name": "JOURNAL OF EXPERIMENTAL MEDICINE",
+    "issn": "0022-1007",
+    "eissn": "1540-9538",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0022-1007": {
+    "name": "JOURNAL OF EXPERIMENTAL MEDICINE",
+    "issn": "0022-1007",
+    "eissn": "1540-9538",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1540-9538": {
+    "name": "JOURNAL OF EXPERIMENTAL MEDICINE",
+    "issn": "0022-1007",
+    "eissn": "1540-9538",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "journalofhepatology": {
+    "name": "JOURNAL OF HEPATOLOGY",
+    "issn": "0168-8278",
+    "eissn": "1600-0641",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0168-8278": {
+    "name": "JOURNAL OF HEPATOLOGY",
+    "issn": "0168-8278",
+    "eissn": "1600-0641",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1600-0641": {
+    "name": "JOURNAL OF HEPATOLOGY",
+    "issn": "0168-8278",
+    "eissn": "1600-0641",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "journaloftheamericanchemicalsociety": {
+    "name": "JOURNAL OF THE AMERICAN CHEMICAL SOCIETY",
+    "issn": "0002-7863",
+    "eissn": "1520-5126",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0002-7863": {
+    "name": "JOURNAL OF THE AMERICAN CHEMICAL SOCIETY",
+    "issn": "0002-7863",
+    "eissn": "1520-5126",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1520-5126": {
+    "name": "JOURNAL OF THE AMERICAN CHEMICAL SOCIETY",
+    "issn": "0002-7863",
+    "eissn": "1520-5126",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "journalofthoraciconcology": {
+    "name": "JOURNAL OF THORACIC ONCOLOGY",
+    "issn": "1556-0864",
+    "eissn": "1556-1380",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1556-0864": {
+    "name": "JOURNAL OF THORACIC ONCOLOGY",
+    "issn": "1556-0864",
+    "eissn": "1556-1380",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1556-1380": {
+    "name": "JOURNAL OF THORACIC ONCOLOGY",
+    "issn": "1556-0864",
+    "eissn": "1556-1380",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "lancetgastroenterology&hepatology": {
+    "name": "LANCET GASTROENTEROLOGY & HEPATOLOGY",
+    "issn": "",
+    "eissn": "2468-1253",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2468-1253": {
+    "name": "LANCET GASTROENTEROLOGY & HEPATOLOGY",
+    "issn": "",
+    "eissn": "2468-1253",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "lancetglobalhealth": {
+    "name": "LANCET GLOBAL HEALTH",
+    "issn": "2214-109X",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2214-109X": {
+    "name": "LANCET GLOBAL HEALTH",
+    "issn": "2214-109X",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "lancethaematology": {
+    "name": "LANCET HAEMATOLOGY",
+    "issn": "2352-3026",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2352-3026": {
+    "name": "LANCET HAEMATOLOGY",
+    "issn": "2352-3026",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "lancetpsychiatry": {
+    "name": "LANCET PSYCHIATRY",
+    "issn": "2215-0374",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2215-0374": {
+    "name": "LANCET PSYCHIATRY",
+    "issn": "2215-0374",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "lancetpublichealth": {
+    "name": "LANCET PUBLIC HEALTH",
+    "issn": "2468-2667",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2468-2667": {
+    "name": "LANCET PUBLIC HEALTH",
+    "issn": "2468-2667",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "molecularcell": {
+    "name": "MOLECULAR CELL",
+    "issn": "1097-2765",
+    "eissn": "1097-4164",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1097-2765": {
+    "name": "MOLECULAR CELL",
+    "issn": "1097-2765",
+    "eissn": "1097-4164",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1097-4164": {
+    "name": "MOLECULAR CELL",
+    "issn": "1097-2765",
+    "eissn": "1097-4164",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "molecularpsychiatry": {
+    "name": "MOLECULAR PSYCHIATRY",
+    "issn": "1359-4184",
+    "eissn": "1476-5578",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1359-4184": {
+    "name": "MOLECULAR PSYCHIATRY",
+    "issn": "1359-4184",
+    "eissn": "1476-5578",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1476-5578": {
+    "name": "MOLECULAR PSYCHIATRY",
+    "issn": "1359-4184",
+    "eissn": "1476-5578",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturebiomedicalengineering": {
+    "name": "NATURE BIOMEDICAL ENGINEERING",
+    "issn": "",
+    "eissn": "2157-846X",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2157-846X": {
+    "name": "NATURE BIOMEDICAL ENGINEERING",
+    "issn": "",
+    "eissn": "2157-846X",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturecancer": {
+    "name": "NATURE CANCER",
+    "issn": "",
+    "eissn": "2662-1347",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2662-1347": {
+    "name": "NATURE CANCER",
+    "issn": "",
+    "eissn": "2662-1347",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturecellbiology": {
+    "name": "NATURE CELL BIOLOGY",
+    "issn": "1465-7392",
+    "eissn": "1476-4679",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1465-7392": {
+    "name": "NATURE CELL BIOLOGY",
+    "issn": "1465-7392",
+    "eissn": "1476-4679",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1476-4679": {
+    "name": "NATURE CELL BIOLOGY",
+    "issn": "1465-7392",
+    "eissn": "1476-4679",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturechemistry": {
+    "name": "NATURE CHEMISTRY",
+    "issn": "1755-4330",
+    "eissn": "1755-4349",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1755-4330": {
+    "name": "NATURE CHEMISTRY",
+    "issn": "1755-4330",
+    "eissn": "1755-4349",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1755-4349": {
+    "name": "NATURE CHEMISTRY",
+    "issn": "1755-4330",
+    "eissn": "1755-4349",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturehumanbehaviour": {
+    "name": "NATURE HUMAN BEHAVIOUR",
+    "issn": "2397-3374",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2397-3374": {
+    "name": "NATURE HUMAN BEHAVIOUR",
+    "issn": "2397-3374",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturemachineintelligence": {
+    "name": "NATURE MACHINE INTELLIGENCE",
+    "issn": "",
+    "eissn": "2522-5839",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2522-5839": {
+    "name": "NATURE MACHINE INTELLIGENCE",
+    "issn": "",
+    "eissn": "2522-5839",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturemetabolism": {
+    "name": "NATURE METABOLISM",
+    "issn": "",
+    "eissn": "2522-5812",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2522-5812": {
+    "name": "NATURE METABOLISM",
+    "issn": "",
+    "eissn": "2522-5812",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturemicrobiology": {
+    "name": "NATURE MICROBIOLOGY",
+    "issn": "2058-5276",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2058-5276": {
+    "name": "NATURE MICROBIOLOGY",
+    "issn": "2058-5276",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "natureprotocols": {
+    "name": "NATURE PROTOCOLS",
+    "issn": "1754-2189",
+    "eissn": "1750-2799",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1754-2189": {
+    "name": "NATURE PROTOCOLS",
+    "issn": "1754-2189",
+    "eissn": "1750-2799",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1750-2799": {
+    "name": "NATURE PROTOCOLS",
+    "issn": "1754-2189",
+    "eissn": "1750-2799",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "naturestructural&molecularbiology": {
+    "name": "NATURE STRUCTURAL & MOLECULAR BIOLOGY",
+    "issn": "1545-9993",
+    "eissn": "1545-9985",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1545-9993": {
+    "name": "NATURE STRUCTURAL & MOLECULAR BIOLOGY",
+    "issn": "1545-9993",
+    "eissn": "1545-9985",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1545-9985": {
+    "name": "NATURE STRUCTURAL & MOLECULAR BIOLOGY",
+    "issn": "1545-9993",
+    "eissn": "1545-9985",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "neuron": {
+    "name": "NEURON",
+    "issn": "0896-6273",
+    "eissn": "1097-4199",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0896-6273": {
+    "name": "NEURON",
+    "issn": "0896-6273",
+    "eissn": "1097-4199",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1097-4199": {
+    "name": "NEURON",
+    "issn": "0896-6273",
+    "eissn": "1097-4199",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "proceedingsofthenationalacademyofsciencesoftheunitedstatesofamerica": {
+    "name": "PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA",
+    "issn": "0027-8424",
+    "eissn": "1091-6490",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0027-8424": {
+    "name": "PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA",
+    "issn": "0027-8424",
+    "eissn": "1091-6490",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1091-6490": {
+    "name": "PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA",
+    "issn": "0027-8424",
+    "eissn": "1091-6490",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "scienceadvances": {
+    "name": "SCIENCE ADVANCES",
+    "issn": "2375-2548",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2375-2548": {
+    "name": "SCIENCE ADVANCES",
+    "issn": "2375-2548",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "scienceimmunology": {
+    "name": "SCIENCE IMMUNOLOGY",
+    "issn": "2470-9468",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "2470-9468": {
+    "name": "SCIENCE IMMUNOLOGY",
+    "issn": "2470-9468",
+    "eissn": "",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "sciencetranslationalmedicine": {
+    "name": "SCIENCE TRANSLATIONAL MEDICINE",
+    "issn": "1946-6234",
+    "eissn": "1946-6242",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1946-6234": {
+    "name": "SCIENCE TRANSLATIONAL MEDICINE",
+    "issn": "1946-6234",
+    "eissn": "1946-6242",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1946-6242": {
+    "name": "SCIENCE TRANSLATIONAL MEDICINE",
+    "issn": "1946-6234",
+    "eissn": "1946-6242",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "thorax": {
+    "name": "THORAX",
+    "issn": "0040-6376",
+    "eissn": "1468-3296",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "0040-6376": {
+    "name": "THORAX",
+    "issn": "0040-6376",
+    "eissn": "1468-3296",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "1468-3296": {
+    "name": "THORAX",
+    "issn": "0040-6376",
+    "eissn": "1468-3296",
+    "tier": "高水平3类",
+    "tier_level": 2
+  },
+  "acsnano": {
+    "name": "ACS NANO",
+    "issn": "1936-0851",
+    "eissn": "1936-086X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1936-0851": {
+    "name": "ACS NANO",
+    "issn": "1936-0851",
+    "eissn": "1936-086X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1936-086X": {
+    "name": "ACS NANO",
+    "issn": "1936-0851",
+    "eissn": "1936-086X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "acssustainablechemistry&engineering": {
+    "name": "ACS SUSTAINABLE CHEMISTRY & ENGINEERING",
+    "issn": "2168-0485",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2168-0485": {
+    "name": "ACS SUSTAINABLE CHEMISTRY & ENGINEERING",
+    "issn": "2168-0485",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "advancedhealthcarematerials": {
+    "name": "ADVANCED HEALTHCARE MATERIALS",
+    "issn": "2192-2640",
+    "eissn": "2192-2659",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2192-2640": {
+    "name": "ADVANCED HEALTHCARE MATERIALS",
+    "issn": "2192-2640",
+    "eissn": "2192-2659",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2192-2659": {
+    "name": "ADVANCED HEALTHCARE MATERIALS",
+    "issn": "2192-2640",
+    "eissn": "2192-2659",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "advancedscience": {
+    "name": "ADVANCED SCIENCE",
+    "issn": "",
+    "eissn": "2198-3844",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2198-3844": {
+    "name": "ADVANCED SCIENCE",
+    "issn": "",
+    "eissn": "2198-3844",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "allergy": {
+    "name": "ALLERGY",
+    "issn": "0105-4538",
+    "eissn": "1398-9995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0105-4538": {
+    "name": "ALLERGY",
+    "issn": "0105-4538",
+    "eissn": "1398-9995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1398-9995": {
+    "name": "ALLERGY",
+    "issn": "0105-4538",
+    "eissn": "1398-9995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "alzheimer's&dementia": {
+    "name": "ALZHEIMER'S & DEMENTIA",
+    "issn": "1552-5260",
+    "eissn": "1552-5279",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1552-5260": {
+    "name": "ALZHEIMER'S & DEMENTIA",
+    "issn": "1552-5260",
+    "eissn": "1552-5279",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1552-5279": {
+    "name": "ALZHEIMER'S & DEMENTIA",
+    "issn": "1552-5260",
+    "eissn": "1552-5279",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "americanjournalofbioethics": {
+    "name": "AMERICAN JOURNAL OF BIOETHICS",
+    "issn": "1526-5161",
+    "eissn": "1536-0075",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1526-5161": {
+    "name": "AMERICAN JOURNAL OF BIOETHICS",
+    "issn": "1526-5161",
+    "eissn": "1536-0075",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1536-0075": {
+    "name": "AMERICAN JOURNAL OF BIOETHICS",
+    "issn": "1526-5161",
+    "eissn": "1536-0075",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "americanjournalofclinicalnutrition": {
+    "name": "AMERICAN JOURNAL OF CLINICAL NUTRITION",
+    "issn": "0002-9165",
+    "eissn": "1938-3207",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0002-9165": {
+    "name": "AMERICAN JOURNAL OF CLINICAL NUTRITION",
+    "issn": "0002-9165",
+    "eissn": "1938-3207",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1938-3207": {
+    "name": "AMERICAN JOURNAL OF CLINICAL NUTRITION",
+    "issn": "0002-9165",
+    "eissn": "1938-3207",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "americanjournalofhumangenetics": {
+    "name": "AMERICAN JOURNAL OF HUMAN GENETICS",
+    "issn": "0002-9297",
+    "eissn": "1537-6605",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0002-9297": {
+    "name": "AMERICAN JOURNAL OF HUMAN GENETICS",
+    "issn": "0002-9297",
+    "eissn": "1537-6605",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1537-6605": {
+    "name": "AMERICAN JOURNAL OF HUMAN GENETICS",
+    "issn": "0002-9297",
+    "eissn": "1537-6605",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "americanjournalofkidneydiseases": {
+    "name": "AMERICAN JOURNAL OF KIDNEY DISEASES",
+    "issn": "0272-6386",
+    "eissn": "1523-6838",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0272-6386": {
+    "name": "AMERICAN JOURNAL OF KIDNEY DISEASES",
+    "issn": "0272-6386",
+    "eissn": "1523-6838",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1523-6838": {
+    "name": "AMERICAN JOURNAL OF KIDNEY DISEASES",
+    "issn": "0272-6386",
+    "eissn": "1523-6838",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "americanjournalofpsychiatry": {
+    "name": "AMERICAN JOURNAL OF PSYCHIATRY",
+    "issn": "0002-953X",
+    "eissn": "1535-7228",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0002-953X": {
+    "name": "AMERICAN JOURNAL OF PSYCHIATRY",
+    "issn": "0002-953X",
+    "eissn": "1535-7228",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1535-7228": {
+    "name": "AMERICAN JOURNAL OF PSYCHIATRY",
+    "issn": "0002-953X",
+    "eissn": "1535-7228",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "annalsofintensivecare": {
+    "name": "ANNALS OF INTENSIVE CARE",
+    "issn": "2110-5820",
+    "eissn": "2110-5820",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2110-5820": {
+    "name": "ANNALS OF INTENSIVE CARE",
+    "issn": "2110-5820",
+    "eissn": "2110-5820",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "annalsofneurology": {
+    "name": "ANNALS OF NEUROLOGY",
+    "issn": "0364-5134",
+    "eissn": "1531-8249",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0364-5134": {
+    "name": "ANNALS OF NEUROLOGY",
+    "issn": "0364-5134",
+    "eissn": "1531-8249",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1531-8249": {
+    "name": "ANNALS OF NEUROLOGY",
+    "issn": "0364-5134",
+    "eissn": "1531-8249",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "annalsofoncology": {
+    "name": "ANNALS OF ONCOLOGY",
+    "issn": "0923-7534",
+    "eissn": "1569-8041",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0923-7534": {
+    "name": "ANNALS OF ONCOLOGY",
+    "issn": "0923-7534",
+    "eissn": "1569-8041",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1569-8041": {
+    "name": "ANNALS OF ONCOLOGY",
+    "issn": "0923-7534",
+    "eissn": "1569-8041",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "annalsofsurgery": {
+    "name": "ANNALS OF SURGERY",
+    "issn": "0003-4932",
+    "eissn": "1528-1140",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0003-4932": {
+    "name": "ANNALS OF SURGERY",
+    "issn": "0003-4932",
+    "eissn": "1528-1140",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1528-1140": {
+    "name": "ANNALS OF SURGERY",
+    "issn": "0003-4932",
+    "eissn": "1528-1140",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "arteriosclerosisthrombosisandvascularbiology": {
+    "name": "ARTERIOSCLEROSIS THROMBOSIS AND VASCULAR BIOLOGY",
+    "issn": "1079-5642",
+    "eissn": "1524-4636",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1079-5642": {
+    "name": "ARTERIOSCLEROSIS THROMBOSIS AND VASCULAR BIOLOGY",
+    "issn": "1079-5642",
+    "eissn": "1524-4636",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1524-4636": {
+    "name": "ARTERIOSCLEROSIS THROMBOSIS AND VASCULAR BIOLOGY",
+    "issn": "1079-5642",
+    "eissn": "1524-4636",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "arthritis&rheumatology": {
+    "name": "ARTHRITIS & RHEUMATOLOGY",
+    "issn": "2326-5191",
+    "eissn": "2326-5205",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2326-5191": {
+    "name": "ARTHRITIS & RHEUMATOLOGY",
+    "issn": "2326-5191",
+    "eissn": "2326-5205",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2326-5205": {
+    "name": "ARTHRITIS & RHEUMATOLOGY",
+    "issn": "2326-5191",
+    "eissn": "2326-5205",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "autophagy": {
+    "name": "AUTOPHAGY",
+    "issn": "1554-8627",
+    "eissn": "1554-8635",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1554-8627": {
+    "name": "AUTOPHAGY",
+    "issn": "1554-8627",
+    "eissn": "1554-8635",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1554-8635": {
+    "name": "AUTOPHAGY",
+    "issn": "1554-8627",
+    "eissn": "1554-8635",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "basicresearchincardiology": {
+    "name": "BASIC RESEARCH IN CARDIOLOGY",
+    "issn": "0300-8428",
+    "eissn": "1435-1803",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0300-8428": {
+    "name": "BASIC RESEARCH IN CARDIOLOGY",
+    "issn": "0300-8428",
+    "eissn": "1435-1803",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1435-1803": {
+    "name": "BASIC RESEARCH IN CARDIOLOGY",
+    "issn": "0300-8428",
+    "eissn": "1435-1803",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "bioactivematerials": {
+    "name": "BIOACTIVE MATERIALS",
+    "issn": "",
+    "eissn": "2452-199X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2452-199X": {
+    "name": "BIOACTIVE MATERIALS",
+    "issn": "",
+    "eissn": "2452-199X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "biologicalpsychiatry": {
+    "name": "BIOLOGICAL PSYCHIATRY",
+    "issn": "0006-3223",
+    "eissn": "1873-2402",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0006-3223": {
+    "name": "BIOLOGICAL PSYCHIATRY",
+    "issn": "0006-3223",
+    "eissn": "1873-2402",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-2402": {
+    "name": "BIOLOGICAL PSYCHIATRY",
+    "issn": "0006-3223",
+    "eissn": "1873-2402",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "biomaterials": {
+    "name": "BIOMATERIALS",
+    "issn": "0142-9612",
+    "eissn": "1878-5905",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0142-9612": {
+    "name": "BIOMATERIALS",
+    "issn": "0142-9612",
+    "eissn": "1878-5905",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1878-5905": {
+    "name": "BIOMATERIALS",
+    "issn": "0142-9612",
+    "eissn": "1878-5905",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "bloodcancerjournal": {
+    "name": "BLOOD CANCER JOURNAL",
+    "issn": "2044-5385",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2044-5385": {
+    "name": "BLOOD CANCER JOURNAL",
+    "issn": "2044-5385",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "bmcmedicine": {
+    "name": "BMC MEDICINE",
+    "issn": "1741-7015",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1741-7015": {
+    "name": "BMC MEDICINE",
+    "issn": "1741-7015",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "brainbehaviorandimmunity": {
+    "name": "BRAIN BEHAVIOR AND IMMUNITY",
+    "issn": "0889-1591",
+    "eissn": "1090-2139",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0889-1591": {
+    "name": "BRAIN BEHAVIOR AND IMMUNITY",
+    "issn": "0889-1591",
+    "eissn": "1090-2139",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1090-2139": {
+    "name": "BRAIN BEHAVIOR AND IMMUNITY",
+    "issn": "0889-1591",
+    "eissn": "1090-2139",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "britishjournalofcancer": {
+    "name": "BRITISH JOURNAL OF CANCER",
+    "issn": "0007-0920",
+    "eissn": "1532-1827",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0007-0920": {
+    "name": "BRITISH JOURNAL OF CANCER",
+    "issn": "0007-0920",
+    "eissn": "1532-1827",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1532-1827": {
+    "name": "BRITISH JOURNAL OF CANCER",
+    "issn": "0007-0920",
+    "eissn": "1532-1827",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "britishjournalofpharmacology": {
+    "name": "BRITISH JOURNAL OF PHARMACOLOGY",
+    "issn": "0007-1188",
+    "eissn": "1476-5381",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0007-1188": {
+    "name": "BRITISH JOURNAL OF PHARMACOLOGY",
+    "issn": "0007-1188",
+    "eissn": "1476-5381",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1476-5381": {
+    "name": "BRITISH JOURNAL OF PHARMACOLOGY",
+    "issn": "0007-1188",
+    "eissn": "1476-5381",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "britishjournalofpsychiatry": {
+    "name": "BRITISH JOURNAL OF PSYCHIATRY",
+    "issn": "0007-1250",
+    "eissn": "1472-1465",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0007-1250": {
+    "name": "BRITISH JOURNAL OF PSYCHIATRY",
+    "issn": "0007-1250",
+    "eissn": "1472-1465",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1472-1465": {
+    "name": "BRITISH JOURNAL OF PSYCHIATRY",
+    "issn": "0007-1250",
+    "eissn": "1472-1465",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "canadianmedicalassociationjournal": {
+    "name": "CANADIAN MEDICAL ASSOCIATION JOURNAL",
+    "issn": "0820-3946",
+    "eissn": "1488-2329",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0820-3946": {
+    "name": "CANADIAN MEDICAL ASSOCIATION JOURNAL",
+    "issn": "0820-3946",
+    "eissn": "1488-2329",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1488-2329": {
+    "name": "CANADIAN MEDICAL ASSOCIATION JOURNAL",
+    "issn": "0820-3946",
+    "eissn": "1488-2329",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "cancercommunications": {
+    "name": "CANCER COMMUNICATIONS",
+    "issn": "",
+    "eissn": "2523-3548",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2523-3548": {
+    "name": "CANCER COMMUNICATIONS",
+    "issn": "",
+    "eissn": "2523-3548",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "cancerimmunologyresearch": {
+    "name": "CANCER IMMUNOLOGY RESEARCH",
+    "issn": "2326-6066",
+    "eissn": "2326-6074",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2326-6066": {
+    "name": "CANCER IMMUNOLOGY RESEARCH",
+    "issn": "2326-6066",
+    "eissn": "2326-6074",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2326-6074": {
+    "name": "CANCER IMMUNOLOGY RESEARCH",
+    "issn": "2326-6066",
+    "eissn": "2326-6074",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "cancerletters": {
+    "name": "CANCER LETTERS",
+    "issn": "0304-3835",
+    "eissn": "1872-7980",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0304-3835": {
+    "name": "CANCER LETTERS",
+    "issn": "0304-3835",
+    "eissn": "1872-7980",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1872-7980": {
+    "name": "CANCER LETTERS",
+    "issn": "0304-3835",
+    "eissn": "1872-7980",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "cancerresearch": {
+    "name": "CANCER RESEARCH",
+    "issn": "0008-5472",
+    "eissn": "1538-7445",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0008-5472": {
+    "name": "CANCER RESEARCH",
+    "issn": "0008-5472",
+    "eissn": "1538-7445",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1538-7445": {
+    "name": "CANCER RESEARCH",
+    "issn": "0008-5472",
+    "eissn": "1538-7445",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "cardiovascularresearch": {
+    "name": "CARDIOVASCULAR RESEARCH",
+    "issn": "0008-6363",
+    "eissn": "1755-3245",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0008-6363": {
+    "name": "CARDIOVASCULAR RESEARCH",
+    "issn": "0008-6363",
+    "eissn": "1755-3245",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1755-3245": {
+    "name": "CARDIOVASCULAR RESEARCH",
+    "issn": "0008-6363",
+    "eissn": "1755-3245",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "celldeathanddifferentiation": {
+    "name": "CELL DEATH AND DIFFERENTIATION",
+    "issn": "1350-9047",
+    "eissn": "1476-5403",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1350-9047": {
+    "name": "CELL DEATH AND DIFFERENTIATION",
+    "issn": "1350-9047",
+    "eissn": "1476-5403",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1476-5403": {
+    "name": "CELL DEATH AND DIFFERENTIATION",
+    "issn": "1350-9047",
+    "eissn": "1476-5403",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "celldiscovery": {
+    "name": "CELL DISCOVERY",
+    "issn": "2056-5968",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2056-5968": {
+    "name": "CELL DISCOVERY",
+    "issn": "2056-5968",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "cellreports": {
+    "name": "CELL REPORTS",
+    "issn": "2211-1247",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2211-1247": {
+    "name": "CELL REPORTS",
+    "issn": "2211-1247",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "cellreportsmedicine": {
+    "name": "CELL REPORTS MEDICINE",
+    "issn": "2666-3791",
+    "eissn": "2666-3791",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2666-3791": {
+    "name": "CELL REPORTS MEDICINE",
+    "issn": "2666-3791",
+    "eissn": "2666-3791",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "chemicalengineeringjournal": {
+    "name": "CHEMICAL ENGINEERING JOURNAL",
+    "issn": "1385-8947",
+    "eissn": "1873-3212",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1385-8947": {
+    "name": "CHEMICAL ENGINEERING JOURNAL",
+    "issn": "1385-8947",
+    "eissn": "1873-3212",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-3212": {
+    "name": "CHEMICAL ENGINEERING JOURNAL",
+    "issn": "1385-8947",
+    "eissn": "1873-3212",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "chest": {
+    "name": "CHEST",
+    "issn": "0012-3692",
+    "eissn": "1931-3543",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0012-3692": {
+    "name": "CHEST",
+    "issn": "0012-3692",
+    "eissn": "1931-3543",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1931-3543": {
+    "name": "CHEST",
+    "issn": "0012-3692",
+    "eissn": "1931-3543",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "clinicalandtranslationalmedicine": {
+    "name": "CLINICAL AND TRANSLATIONAL MEDICINE",
+    "issn": "2001-1326",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2001-1326": {
+    "name": "CLINICAL AND TRANSLATIONAL MEDICINE",
+    "issn": "2001-1326",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "clinicalcancerresearch": {
+    "name": "CLINICAL CANCER RESEARCH",
+    "issn": "1078-0432",
+    "eissn": "1557-3265",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1078-0432": {
+    "name": "CLINICAL CANCER RESEARCH",
+    "issn": "1078-0432",
+    "eissn": "1557-3265",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1557-3265": {
+    "name": "CLINICAL CANCER RESEARCH",
+    "issn": "1078-0432",
+    "eissn": "1557-3265",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "clinicalchemistry": {
+    "name": "CLINICAL CHEMISTRY",
+    "issn": "0009-9147",
+    "eissn": "1530-8561",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0009-9147": {
+    "name": "CLINICAL CHEMISTRY",
+    "issn": "0009-9147",
+    "eissn": "1530-8561",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1530-8561": {
+    "name": "CLINICAL CHEMISTRY",
+    "issn": "0009-9147",
+    "eissn": "1530-8561",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "clinicalgastroenterologyandhepatology": {
+    "name": "CLINICAL GASTROENTEROLOGY AND HEPATOLOGY",
+    "issn": "1542-3565",
+    "eissn": "1542-7714",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1542-3565": {
+    "name": "CLINICAL GASTROENTEROLOGY AND HEPATOLOGY",
+    "issn": "1542-3565",
+    "eissn": "1542-7714",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1542-7714": {
+    "name": "CLINICAL GASTROENTEROLOGY AND HEPATOLOGY",
+    "issn": "1542-3565",
+    "eissn": "1542-7714",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "clinicalinfectiousdiseases": {
+    "name": "CLINICAL INFECTIOUS DISEASES",
+    "issn": "1058-4838",
+    "eissn": "1537-6591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1058-4838": {
+    "name": "CLINICAL INFECTIOUS DISEASES",
+    "issn": "1058-4838",
+    "eissn": "1537-6591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1537-6591": {
+    "name": "CLINICAL INFECTIOUS DISEASES",
+    "issn": "1058-4838",
+    "eissn": "1537-6591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "criticalcare": {
+    "name": "CRITICAL CARE",
+    "issn": "1364-8535",
+    "eissn": "1466-609X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1364-8535": {
+    "name": "CRITICAL CARE",
+    "issn": "1364-8535",
+    "eissn": "1466-609X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1466-609X": {
+    "name": "CRITICAL CARE",
+    "issn": "1364-8535",
+    "eissn": "1466-609X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "criticalcaremedicine": {
+    "name": "CRITICAL CARE MEDICINE",
+    "issn": "0090-3493",
+    "eissn": "1530-0293",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0090-3493": {
+    "name": "CRITICAL CARE MEDICINE",
+    "issn": "0090-3493",
+    "eissn": "1530-0293",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1530-0293": {
+    "name": "CRITICAL CARE MEDICINE",
+    "issn": "0090-3493",
+    "eissn": "1530-0293",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "currentbiology": {
+    "name": "CURRENT BIOLOGY",
+    "issn": "0960-9822",
+    "eissn": "1879-0445",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0960-9822": {
+    "name": "CURRENT BIOLOGY",
+    "issn": "0960-9822",
+    "eissn": "1879-0445",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1879-0445": {
+    "name": "CURRENT BIOLOGY",
+    "issn": "0960-9822",
+    "eissn": "1879-0445",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "diabetes": {
+    "name": "DIABETES",
+    "issn": "0012-1797",
+    "eissn": "1939-327X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0012-1797": {
+    "name": "DIABETES",
+    "issn": "0012-1797",
+    "eissn": "1939-327X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1939-327X": {
+    "name": "DIABETES",
+    "issn": "0012-1797",
+    "eissn": "1939-327X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "diabetologia": {
+    "name": "DIABETOLOGIA",
+    "issn": "0012-186X",
+    "eissn": "1432-0428",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0012-186X": {
+    "name": "DIABETOLOGIA",
+    "issn": "0012-186X",
+    "eissn": "1432-0428",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1432-0428": {
+    "name": "DIABETOLOGIA",
+    "issn": "0012-186X",
+    "eissn": "1432-0428",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "ebiomedicine": {
+    "name": "EBIOMEDICINE",
+    "issn": "2352-3964",
+    "eissn": "2352-3964",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2352-3964": {
+    "name": "EBIOMEDICINE",
+    "issn": "2352-3964",
+    "eissn": "2352-3964",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "embomolecularmedicine": {
+    "name": "EMBO MOLECULAR MEDICINE",
+    "issn": "1757-4676",
+    "eissn": "1757-4684",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1757-4676": {
+    "name": "EMBO MOLECULAR MEDICINE",
+    "issn": "1757-4676",
+    "eissn": "1757-4684",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1757-4684": {
+    "name": "EMBO MOLECULAR MEDICINE",
+    "issn": "1757-4676",
+    "eissn": "1757-4684",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "endoscopy": {
+    "name": "ENDOSCOPY",
+    "issn": "0013-726X",
+    "eissn": "1438-8812",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0013-726X": {
+    "name": "ENDOSCOPY",
+    "issn": "0013-726X",
+    "eissn": "1438-8812",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1438-8812": {
+    "name": "ENDOSCOPY",
+    "issn": "0013-726X",
+    "eissn": "1438-8812",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "engineering": {
+    "name": "ENGINEERING",
+    "issn": "2095-8099",
+    "eissn": "2096-0026",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2095-8099": {
+    "name": "ENGINEERING",
+    "issn": "2095-8099",
+    "eissn": "2096-0026",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2096-0026": {
+    "name": "ENGINEERING",
+    "issn": "2095-8099",
+    "eissn": "2096-0026",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "environmentinternational": {
+    "name": "ENVIRONMENT INTERNATIONAL",
+    "issn": "0160-4120",
+    "eissn": "1873-6750",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0160-4120": {
+    "name": "ENVIRONMENT INTERNATIONAL",
+    "issn": "0160-4120",
+    "eissn": "1873-6750",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-6750": {
+    "name": "ENVIRONMENT INTERNATIONAL",
+    "issn": "0160-4120",
+    "eissn": "1873-6750",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "environmentalhealthperspectives": {
+    "name": "ENVIRONMENTAL HEALTH PERSPECTIVES",
+    "issn": "0091-6765",
+    "eissn": "1552-9924",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0091-6765": {
+    "name": "ENVIRONMENTAL HEALTH PERSPECTIVES",
+    "issn": "0091-6765",
+    "eissn": "1552-9924",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1552-9924": {
+    "name": "ENVIRONMENTAL HEALTH PERSPECTIVES",
+    "issn": "0091-6765",
+    "eissn": "1552-9924",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "environmentalscienceandecotechnology": {
+    "name": "ENVIRONMENTAL SCIENCE AND ECOTECHNOLOGY",
+    "issn": "2666-4984",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2666-4984": {
+    "name": "ENVIRONMENTAL SCIENCE AND ECOTECHNOLOGY",
+    "issn": "2666-4984",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "europeanjournalofepidemiology": {
+    "name": "EUROPEAN JOURNAL OF EPIDEMIOLOGY",
+    "issn": "0393-2990",
+    "eissn": "1573-7284",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0393-2990": {
+    "name": "EUROPEAN JOURNAL OF EPIDEMIOLOGY",
+    "issn": "0393-2990",
+    "eissn": "1573-7284",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1573-7284": {
+    "name": "EUROPEAN JOURNAL OF EPIDEMIOLOGY",
+    "issn": "0393-2990",
+    "eissn": "1573-7284",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "europeanjournalofnuclearmedicineandmolecularimaging": {
+    "name": "EUROPEAN JOURNAL OF NUCLEAR MEDICINE AND MOLECULAR IMAGING",
+    "issn": "1619-7070",
+    "eissn": "1619-7089",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1619-7070": {
+    "name": "EUROPEAN JOURNAL OF NUCLEAR MEDICINE AND MOLECULAR IMAGING",
+    "issn": "1619-7070",
+    "eissn": "1619-7089",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1619-7089": {
+    "name": "EUROPEAN JOURNAL OF NUCLEAR MEDICINE AND MOLECULAR IMAGING",
+    "issn": "1619-7070",
+    "eissn": "1619-7089",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "food&function": {
+    "name": "FOOD & FUNCTION",
+    "issn": "2042-6496",
+    "eissn": "2042-650X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2042-6496": {
+    "name": "FOOD & FUNCTION",
+    "issn": "2042-6496",
+    "eissn": "2042-650X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2042-650X": {
+    "name": "FOOD & FUNCTION",
+    "issn": "2042-6496",
+    "eissn": "2042-650X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "freeradicalbiologyandmedicine": {
+    "name": "FREE RADICAL BIOLOGY AND MEDICINE",
+    "issn": "0891-5849",
+    "eissn": "1873-4596",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0891-5849": {
+    "name": "FREE RADICAL BIOLOGY AND MEDICINE",
+    "issn": "0891-5849",
+    "eissn": "1873-4596",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-4596": {
+    "name": "FREE RADICAL BIOLOGY AND MEDICINE",
+    "issn": "0891-5849",
+    "eissn": "1873-4596",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "frontiersofmedicine": {
+    "name": "FRONTIERS OF MEDICINE",
+    "issn": "2095-0217",
+    "eissn": "2095-0225",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2095-0217": {
+    "name": "FRONTIERS OF MEDICINE",
+    "issn": "2095-0217",
+    "eissn": "2095-0225",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2095-0225": {
+    "name": "FRONTIERS OF MEDICINE",
+    "issn": "2095-0217",
+    "eissn": "2095-0225",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "genes&development": {
+    "name": "GENES & DEVELOPMENT",
+    "issn": "0890-9369",
+    "eissn": "1549-5477",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0890-9369": {
+    "name": "GENES & DEVELOPMENT",
+    "issn": "0890-9369",
+    "eissn": "1549-5477",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1549-5477": {
+    "name": "GENES & DEVELOPMENT",
+    "issn": "0890-9369",
+    "eissn": "1549-5477",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "geneticsinmedicine": {
+    "name": "GENETICS IN MEDICINE",
+    "issn": "1098-3600",
+    "eissn": "1530-0366",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1098-3600": {
+    "name": "GENETICS IN MEDICINE",
+    "issn": "1098-3600",
+    "eissn": "1530-0366",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1530-0366": {
+    "name": "GENETICS IN MEDICINE",
+    "issn": "1098-3600",
+    "eissn": "1530-0366",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "genomemedicine": {
+    "name": "GENOME MEDICINE",
+    "issn": "1756-994X",
+    "eissn": "1756-994X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1756-994X": {
+    "name": "GENOME MEDICINE",
+    "issn": "1756-994X",
+    "eissn": "1756-994X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "genomeresearch": {
+    "name": "GENOME RESEARCH",
+    "issn": "1088-9051",
+    "eissn": "1549-5469",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1088-9051": {
+    "name": "GENOME RESEARCH",
+    "issn": "1088-9051",
+    "eissn": "1549-5469",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1549-5469": {
+    "name": "GENOME RESEARCH",
+    "issn": "1088-9051",
+    "eissn": "1549-5469",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "haematologica": {
+    "name": "HAEMATOLOGICA",
+    "issn": "0390-6078",
+    "eissn": "1592-8721",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0390-6078": {
+    "name": "HAEMATOLOGICA",
+    "issn": "0390-6078",
+    "eissn": "1592-8721",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1592-8721": {
+    "name": "HAEMATOLOGICA",
+    "issn": "0390-6078",
+    "eissn": "1592-8721",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "healthaffairs": {
+    "name": "HEALTH AFFAIRS",
+    "issn": "0278-2715",
+    "eissn": "0278-2715",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0278-2715": {
+    "name": "HEALTH AFFAIRS",
+    "issn": "0278-2715",
+    "eissn": "0278-2715",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "hepatology": {
+    "name": "HEPATOLOGY",
+    "issn": "0270-9139",
+    "eissn": "1527-3350",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0270-9139": {
+    "name": "HEPATOLOGY",
+    "issn": "0270-9139",
+    "eissn": "1527-3350",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1527-3350": {
+    "name": "HEPATOLOGY",
+    "issn": "0270-9139",
+    "eissn": "1527-3350",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "hypertension": {
+    "name": "HYPERTENSION",
+    "issn": "0194-911X",
+    "eissn": "1524-4563",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0194-911X": {
+    "name": "HYPERTENSION",
+    "issn": "0194-911X",
+    "eissn": "1524-4563",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1524-4563": {
+    "name": "HYPERTENSION",
+    "issn": "0194-911X",
+    "eissn": "1524-4563",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "ieeeinternetofthingsjournal": {
+    "name": "IEEE INTERNET OF THINGS JOURNAL",
+    "issn": "2327-4662",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2327-4662": {
+    "name": "IEEE INTERNET OF THINGS JOURNAL",
+    "issn": "2327-4662",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "ieeetransactionsonmedicalimaging": {
+    "name": "IEEE TRANSACTIONS ON MEDICAL IMAGING",
+    "issn": "0278-0062",
+    "eissn": "1558-254X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0278-0062": {
+    "name": "IEEE TRANSACTIONS ON MEDICAL IMAGING",
+    "issn": "0278-0062",
+    "eissn": "1558-254X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1558-254X": {
+    "name": "IEEE TRANSACTIONS ON MEDICAL IMAGING",
+    "issn": "0278-0062",
+    "eissn": "1558-254X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "iinternationaljournalofbehavioralnutritionandphysicalactivity": {
+    "name": "IINTERNATIONAL JOURNAL OF BEHAVIORAL NUTRITION AND PHYSICAL ACTIVITY",
+    "issn": "1479-5868",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1479-5868": {
+    "name": "IINTERNATIONAL JOURNAL OF BEHAVIORAL NUTRITION AND PHYSICAL ACTIVITY",
+    "issn": "1479-5868",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "internationaljournalofepidemiology": {
+    "name": "INTERNATIONAL JOURNAL OF EPIDEMIOLOGY",
+    "issn": "0300-5771",
+    "eissn": "1464-3685",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0300-5771": {
+    "name": "INTERNATIONAL JOURNAL OF EPIDEMIOLOGY",
+    "issn": "0300-5771",
+    "eissn": "1464-3685",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1464-3685": {
+    "name": "INTERNATIONAL JOURNAL OF EPIDEMIOLOGY",
+    "issn": "0300-5771",
+    "eissn": "1464-3685",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "internationaljournalofnursingstudies": {
+    "name": "INTERNATIONAL JOURNAL OF NURSING STUDIES",
+    "issn": "0020-7489",
+    "eissn": "1873-491X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0020-7489": {
+    "name": "INTERNATIONAL JOURNAL OF NURSING STUDIES",
+    "issn": "0020-7489",
+    "eissn": "1873-491X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-491X": {
+    "name": "INTERNATIONAL JOURNAL OF NURSING STUDIES",
+    "issn": "0020-7489",
+    "eissn": "1873-491X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "ismejournal": {
+    "name": "ISME JOURNAL",
+    "issn": "1751-7362",
+    "eissn": "1751-7370",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1751-7362": {
+    "name": "ISME JOURNAL",
+    "issn": "1751-7362",
+    "eissn": "1751-7370",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1751-7370": {
+    "name": "ISME JOURNAL",
+    "issn": "1751-7362",
+    "eissn": "1751-7370",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "jacc-basictotranslationalscience": {
+    "name": "JACC-BASIC TO TRANSLATIONAL SCIENCE",
+    "issn": "2452-302X",
+    "eissn": "2452-302X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2452-302X": {
+    "name": "JACC-BASIC TO TRANSLATIONAL SCIENCE",
+    "issn": "2452-302X",
+    "eissn": "2452-302X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "jacc-cardiovascularimaging": {
+    "name": "JACC-CARDIOVASCULAR IMAGING",
+    "issn": "1936-878X",
+    "eissn": "1876-7591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1936-878X": {
+    "name": "JACC-CARDIOVASCULAR IMAGING",
+    "issn": "1936-878X",
+    "eissn": "1876-7591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1876-7591": {
+    "name": "JACC-CARDIOVASCULAR IMAGING",
+    "issn": "1936-878X",
+    "eissn": "1876-7591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "jacc-cardiovascularinterventions": {
+    "name": "JACC-CARDIOVASCULAR INTERVENTIONS",
+    "issn": "1936-8798",
+    "eissn": "1876-7605",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1936-8798": {
+    "name": "JACC-CARDIOVASCULAR INTERVENTIONS",
+    "issn": "1936-8798",
+    "eissn": "1876-7605",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1876-7605": {
+    "name": "JACC-CARDIOVASCULAR INTERVENTIONS",
+    "issn": "1936-8798",
+    "eissn": "1876-7605",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "jacc-heartfailure": {
+    "name": "JACC-HEART FAILURE",
+    "issn": "2213-1779",
+    "eissn": "2213-1787",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2213-1779": {
+    "name": "JACC-HEART FAILURE",
+    "issn": "2213-1779",
+    "eissn": "2213-1787",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2213-1787": {
+    "name": "JACC-HEART FAILURE",
+    "issn": "2213-1779",
+    "eissn": "2213-1787",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofappliedpsychology": {
+    "name": "JOURNAL OF APPLIED PSYCHOLOGY",
+    "issn": "0021-9010",
+    "eissn": "1939-1854",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0021-9010": {
+    "name": "JOURNAL OF APPLIED PSYCHOLOGY",
+    "issn": "0021-9010",
+    "eissn": "1939-1854",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1939-1854": {
+    "name": "JOURNAL OF APPLIED PSYCHOLOGY",
+    "issn": "0021-9010",
+    "eissn": "1939-1854",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofautoimmunity": {
+    "name": "JOURNAL OF AUTOIMMUNITY",
+    "issn": "0896-8411",
+    "eissn": "1095-9157",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0896-8411": {
+    "name": "JOURNAL OF AUTOIMMUNITY",
+    "issn": "0896-8411",
+    "eissn": "1095-9157",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1095-9157": {
+    "name": "JOURNAL OF AUTOIMMUNITY",
+    "issn": "0896-8411",
+    "eissn": "1095-9157",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofcachexiasarcopeniaandmuscle": {
+    "name": "JOURNAL OF CACHEXIA SARCOPENIA AND MUSCLE",
+    "issn": "2190-5991",
+    "eissn": "2190-6009",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2190-5991": {
+    "name": "JOURNAL OF CACHEXIA SARCOPENIA AND MUSCLE",
+    "issn": "2190-5991",
+    "eissn": "2190-6009",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2190-6009": {
+    "name": "JOURNAL OF CACHEXIA SARCOPENIA AND MUSCLE",
+    "issn": "2190-5991",
+    "eissn": "2190-6009",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofcellbiology": {
+    "name": "JOURNAL OF CELL BIOLOGY",
+    "issn": "0021-9525",
+    "eissn": "1540-8140",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0021-9525": {
+    "name": "JOURNAL OF CELL BIOLOGY",
+    "issn": "0021-9525",
+    "eissn": "1540-8140",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1540-8140": {
+    "name": "JOURNAL OF CELL BIOLOGY",
+    "issn": "0021-9525",
+    "eissn": "1540-8140",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofchildpsychologyandpsychiatry": {
+    "name": "JOURNAL OF CHILD PSYCHOLOGY AND PSYCHIATRY",
+    "issn": "0021-9630",
+    "eissn": "1469-7610",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0021-9630": {
+    "name": "JOURNAL OF CHILD PSYCHOLOGY AND PSYCHIATRY",
+    "issn": "0021-9630",
+    "eissn": "1469-7610",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1469-7610": {
+    "name": "JOURNAL OF CHILD PSYCHOLOGY AND PSYCHIATRY",
+    "issn": "0021-9630",
+    "eissn": "1469-7610",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofcleanerproduction": {
+    "name": "JOURNAL OF CLEANER PRODUCTION",
+    "issn": "0959-6526",
+    "eissn": "1879-1786",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0959-6526": {
+    "name": "JOURNAL OF CLEANER PRODUCTION",
+    "issn": "0959-6526",
+    "eissn": "1879-1786",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1879-1786": {
+    "name": "JOURNAL OF CLEANER PRODUCTION",
+    "issn": "0959-6526",
+    "eissn": "1879-1786",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofcontrolledrelease": {
+    "name": "JOURNAL OF CONTROLLED RELEASE",
+    "issn": "0168-3659",
+    "eissn": "1873-4995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0168-3659": {
+    "name": "JOURNAL OF CONTROLLED RELEASE",
+    "issn": "0168-3659",
+    "eissn": "1873-4995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-4995": {
+    "name": "JOURNAL OF CONTROLLED RELEASE",
+    "issn": "0168-3659",
+    "eissn": "1873-4995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofdentalresearch": {
+    "name": "JOURNAL OF DENTAL RESEARCH",
+    "issn": "0022-0345",
+    "eissn": "1544-0591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0022-0345": {
+    "name": "JOURNAL OF DENTAL RESEARCH",
+    "issn": "0022-0345",
+    "eissn": "1544-0591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1544-0591": {
+    "name": "JOURNAL OF DENTAL RESEARCH",
+    "issn": "0022-0345",
+    "eissn": "1544-0591",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofhazardousmaterials": {
+    "name": "JOURNAL OF HAZARDOUS MATERIALS",
+    "issn": "0304-3894",
+    "eissn": "1873-3336",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0304-3894": {
+    "name": "JOURNAL OF HAZARDOUS MATERIALS",
+    "issn": "0304-3894",
+    "eissn": "1873-3336",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-3336": {
+    "name": "JOURNAL OF HAZARDOUS MATERIALS",
+    "issn": "0304-3894",
+    "eissn": "1873-3336",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofheartandlungtransplantation": {
+    "name": "JOURNAL OF HEART AND LUNG TRANSPLANTATION",
+    "issn": "1053-2498",
+    "eissn": "1557-3117",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1053-2498": {
+    "name": "JOURNAL OF HEART AND LUNG TRANSPLANTATION",
+    "issn": "1053-2498",
+    "eissn": "1557-3117",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1557-3117": {
+    "name": "JOURNAL OF HEART AND LUNG TRANSPLANTATION",
+    "issn": "1053-2498",
+    "eissn": "1557-3117",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofhematology&oncology": {
+    "name": "JOURNAL OF HEMATOLOGY & ONCOLOGY",
+    "issn": "",
+    "eissn": "1756-8722",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1756-8722": {
+    "name": "JOURNAL OF HEMATOLOGY & ONCOLOGY",
+    "issn": "",
+    "eissn": "1756-8722",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofnanobiotechnology": {
+    "name": "JOURNAL OF NANOBIOTECHNOLOGY",
+    "issn": "1477-3155",
+    "eissn": "1477-3155",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1477-3155": {
+    "name": "JOURNAL OF NANOBIOTECHNOLOGY",
+    "issn": "1477-3155",
+    "eissn": "1477-3155",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofneuroinflammation": {
+    "name": "JOURNAL OF NEUROINFLAMMATION",
+    "issn": "",
+    "eissn": "1742-2094",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1742-2094": {
+    "name": "JOURNAL OF NEUROINFLAMMATION",
+    "issn": "",
+    "eissn": "1742-2094",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofneurologyneurosurgeryandpsychiatry": {
+    "name": "JOURNAL OF NEUROLOGY NEUROSURGERY AND PSYCHIATRY",
+    "issn": "0022-3050",
+    "eissn": "1468-330X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0022-3050": {
+    "name": "JOURNAL OF NEUROLOGY NEUROSURGERY AND PSYCHIATRY",
+    "issn": "0022-3050",
+    "eissn": "1468-330X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1468-330X": {
+    "name": "JOURNAL OF NEUROLOGY NEUROSURGERY AND PSYCHIATRY",
+    "issn": "0022-3050",
+    "eissn": "1468-330X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofneuroscience": {
+    "name": "JOURNAL OF NEUROSCIENCE",
+    "issn": "0270-6474",
+    "eissn": "1529-2401",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0270-6474": {
+    "name": "JOURNAL OF NEUROSCIENCE",
+    "issn": "0270-6474",
+    "eissn": "1529-2401",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1529-2401": {
+    "name": "JOURNAL OF NEUROSCIENCE",
+    "issn": "0270-6474",
+    "eissn": "1529-2401",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofnuclearmedicine": {
+    "name": "JOURNAL OF NUCLEAR MEDICINE",
+    "issn": "0161-5505",
+    "eissn": "1535-5667",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0161-5505": {
+    "name": "JOURNAL OF NUCLEAR MEDICINE",
+    "issn": "0161-5505",
+    "eissn": "1535-5667",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1535-5667": {
+    "name": "JOURNAL OF NUCLEAR MEDICINE",
+    "issn": "0161-5505",
+    "eissn": "1535-5667",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofphysiotherapy": {
+    "name": "JOURNAL OF PHYSIOTHERAPY",
+    "issn": "1836-9553",
+    "eissn": "1836-9561",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1836-9553": {
+    "name": "JOURNAL OF PHYSIOTHERAPY",
+    "issn": "1836-9553",
+    "eissn": "1836-9561",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1836-9561": {
+    "name": "JOURNAL OF PHYSIOTHERAPY",
+    "issn": "1836-9553",
+    "eissn": "1836-9561",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journalofpinealresearch": {
+    "name": "JOURNAL OF PINEAL RESEARCH",
+    "issn": "0742-3098",
+    "eissn": "1600-079X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0742-3098": {
+    "name": "JOURNAL OF PINEAL RESEARCH",
+    "issn": "0742-3098",
+    "eissn": "1600-079X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1600-079X": {
+    "name": "JOURNAL OF PINEAL RESEARCH",
+    "issn": "0742-3098",
+    "eissn": "1600-079X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journaloftheamericanacademyofdermatology": {
+    "name": "JOURNAL OF THE AMERICAN ACADEMY OF DERMATOLOGY",
+    "issn": "0190-9622",
+    "eissn": "1097-6787",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0190-9622": {
+    "name": "JOURNAL OF THE AMERICAN ACADEMY OF DERMATOLOGY",
+    "issn": "0190-9622",
+    "eissn": "1097-6787",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1097-6787": {
+    "name": "JOURNAL OF THE AMERICAN ACADEMY OF DERMATOLOGY",
+    "issn": "0190-9622",
+    "eissn": "1097-6787",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "journaloftheamericansocietyofnephrology": {
+    "name": "JOURNAL OF THE AMERICAN SOCIETY OF NEPHROLOGY",
+    "issn": "1046-6673",
+    "eissn": "1533-3450",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1046-6673": {
+    "name": "JOURNAL OF THE AMERICAN SOCIETY OF NEPHROLOGY",
+    "issn": "1046-6673",
+    "eissn": "1533-3450",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1533-3450": {
+    "name": "JOURNAL OF THE AMERICAN SOCIETY OF NEPHROLOGY",
+    "issn": "1046-6673",
+    "eissn": "1533-3450",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "kidneyinternational": {
+    "name": "KIDNEY INTERNATIONAL",
+    "issn": "0085-2538",
+    "eissn": "1523-1755",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0085-2538": {
+    "name": "KIDNEY INTERNATIONAL",
+    "issn": "0085-2538",
+    "eissn": "1523-1755",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1523-1755": {
+    "name": "KIDNEY INTERNATIONAL",
+    "issn": "0085-2538",
+    "eissn": "1523-1755",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "leukemia": {
+    "name": "LEUKEMIA",
+    "issn": "0887-6924",
+    "eissn": "1476-5551",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0887-6924": {
+    "name": "LEUKEMIA",
+    "issn": "0887-6924",
+    "eissn": "1476-5551",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1476-5551": {
+    "name": "LEUKEMIA",
+    "issn": "0887-6924",
+    "eissn": "1476-5551",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "livercancer": {
+    "name": "LIVER CANCER",
+    "issn": "2235-1795",
+    "eissn": "1664-5553",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2235-1795": {
+    "name": "LIVER CANCER",
+    "issn": "2235-1795",
+    "eissn": "1664-5553",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1664-5553": {
+    "name": "LIVER CANCER",
+    "issn": "2235-1795",
+    "eissn": "1664-5553",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "materialshorizons": {
+    "name": "MATERIALS HORIZONS",
+    "issn": "2051-6347",
+    "eissn": "2051-6355",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2051-6347": {
+    "name": "MATERIALS HORIZONS",
+    "issn": "2051-6347",
+    "eissn": "2051-6355",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2051-6355": {
+    "name": "MATERIALS HORIZONS",
+    "issn": "2051-6347",
+    "eissn": "2051-6355",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "medicalimageanalysis": {
+    "name": "MEDICAL IMAGE ANALYSIS",
+    "issn": "1361-8415",
+    "eissn": "1361-8423",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1361-8415": {
+    "name": "MEDICAL IMAGE ANALYSIS",
+    "issn": "1361-8415",
+    "eissn": "1361-8423",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1361-8423": {
+    "name": "MEDICAL IMAGE ANALYSIS",
+    "issn": "1361-8415",
+    "eissn": "1361-8423",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "microbiome": {
+    "name": "MICROBIOME",
+    "issn": "2049-2618",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2049-2618": {
+    "name": "MICROBIOME",
+    "issn": "2049-2618",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "molecularneurodegeneration": {
+    "name": "MOLECULAR NEURODEGENERATION",
+    "issn": "1750-1326",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1750-1326": {
+    "name": "MOLECULAR NEURODEGENERATION",
+    "issn": "1750-1326",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "moleculartherapy": {
+    "name": "MOLECULAR THERAPY",
+    "issn": "1525-0016",
+    "eissn": "1525-0024",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1525-0016": {
+    "name": "MOLECULAR THERAPY",
+    "issn": "1525-0016",
+    "eissn": "1525-0024",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1525-0024": {
+    "name": "MOLECULAR THERAPY",
+    "issn": "1525-0016",
+    "eissn": "1525-0024",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "nanoletters": {
+    "name": "NANO LETTERS",
+    "issn": "1530-6984",
+    "eissn": "1530-6992",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1530-6984": {
+    "name": "NANO LETTERS",
+    "issn": "1530-6984",
+    "eissn": "1530-6992",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1530-6992": {
+    "name": "NANO LETTERS",
+    "issn": "1530-6984",
+    "eissn": "1530-6992",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "nano-microletters": {
+    "name": "NANO-MICRO LETTERS",
+    "issn": "2311-6706",
+    "eissn": "2150-5551",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2311-6706": {
+    "name": "NANO-MICRO LETTERS",
+    "issn": "2311-6706",
+    "eissn": "2150-5551",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2150-5551": {
+    "name": "NANO-MICRO LETTERS",
+    "issn": "2311-6706",
+    "eissn": "2150-5551",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "natureaging": {
+    "name": "NATURE AGING",
+    "issn": "",
+    "eissn": "2662-8465",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2662-8465": {
+    "name": "NATURE AGING",
+    "issn": "",
+    "eissn": "2662-8465",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "naturecommunications": {
+    "name": "NATURE COMMUNICATIONS",
+    "issn": "2041-1723",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2041-1723": {
+    "name": "NATURE COMMUNICATIONS",
+    "issn": "2041-1723",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "neurology": {
+    "name": "NEUROLOGY",
+    "issn": "0028-3878",
+    "eissn": "1526-632X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0028-3878": {
+    "name": "NEUROLOGY",
+    "issn": "0028-3878",
+    "eissn": "1526-632X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1526-632X": {
+    "name": "NEUROLOGY",
+    "issn": "0028-3878",
+    "eissn": "1526-632X",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "neuro-oncology": {
+    "name": "NEURO-ONCOLOGY",
+    "issn": "1522-8517",
+    "eissn": "1523-5866",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1522-8517": {
+    "name": "NEURO-ONCOLOGY",
+    "issn": "1522-8517",
+    "eissn": "1523-5866",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1523-5866": {
+    "name": "NEURO-ONCOLOGY",
+    "issn": "1522-8517",
+    "eissn": "1523-5866",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "npjregenerativemedicine": {
+    "name": "NPJ REGENERATIVE MEDICINE",
+    "issn": "",
+    "eissn": "2057-3995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2057-3995": {
+    "name": "NPJ REGENERATIVE MEDICINE",
+    "issn": "",
+    "eissn": "2057-3995",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "nucleicacidsresearch": {
+    "name": "NUCLEIC ACIDS RESEARCH",
+    "issn": "0305-1048",
+    "eissn": "1362-4962",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0305-1048": {
+    "name": "NUCLEIC ACIDS RESEARCH",
+    "issn": "0305-1048",
+    "eissn": "1362-4962",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1362-4962": {
+    "name": "NUCLEIC ACIDS RESEARCH",
+    "issn": "0305-1048",
+    "eissn": "1362-4962",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "oncogene": {
+    "name": "ONCOGENE",
+    "issn": "0950-9232",
+    "eissn": "1476-5594",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0950-9232": {
+    "name": "ONCOGENE",
+    "issn": "0950-9232",
+    "eissn": "1476-5594",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1476-5594": {
+    "name": "ONCOGENE",
+    "issn": "0950-9232",
+    "eissn": "1476-5594",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "ophthalmology": {
+    "name": "OPHTHALMOLOGY",
+    "issn": "0161-6420",
+    "eissn": "1549-4713",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0161-6420": {
+    "name": "OPHTHALMOLOGY",
+    "issn": "0161-6420",
+    "eissn": "1549-4713",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1549-4713": {
+    "name": "OPHTHALMOLOGY",
+    "issn": "0161-6420",
+    "eissn": "1549-4713",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "plosbiology": {
+    "name": "PLOS BIOLOGY",
+    "issn": "1544-9173",
+    "eissn": "1545-7885",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1544-9173": {
+    "name": "PLOS BIOLOGY",
+    "issn": "1544-9173",
+    "eissn": "1545-7885",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1545-7885": {
+    "name": "PLOS BIOLOGY",
+    "issn": "1544-9173",
+    "eissn": "1545-7885",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "plospathogens": {
+    "name": "PLOS PATHOGENS",
+    "issn": "1553-7366",
+    "eissn": "1553-7374",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1553-7366": {
+    "name": "PLOS PATHOGENS",
+    "issn": "1553-7366",
+    "eissn": "1553-7374",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1553-7374": {
+    "name": "PLOS PATHOGENS",
+    "issn": "1553-7366",
+    "eissn": "1553-7374",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "protein&cell": {
+    "name": "PROTEIN & CELL",
+    "issn": "1674-800X",
+    "eissn": "1674-8018",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1674-800X": {
+    "name": "PROTEIN & CELL",
+    "issn": "1674-800X",
+    "eissn": "1674-8018",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1674-8018": {
+    "name": "PROTEIN & CELL",
+    "issn": "1674-800X",
+    "eissn": "1674-8018",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "psychologicalbulletin": {
+    "name": "PSYCHOLOGICAL BULLETIN",
+    "issn": "0033-2909",
+    "eissn": "1939-1455",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0033-2909": {
+    "name": "PSYCHOLOGICAL BULLETIN",
+    "issn": "0033-2909",
+    "eissn": "1939-1455",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1939-1455": {
+    "name": "PSYCHOLOGICAL BULLETIN",
+    "issn": "0033-2909",
+    "eissn": "1939-1455",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "psychotherapyandpsychosomatics": {
+    "name": "PSYCHOTHERAPY AND PSYCHOSOMATICS",
+    "issn": "0033-3190",
+    "eissn": "1423-0348",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0033-3190": {
+    "name": "PSYCHOTHERAPY AND PSYCHOSOMATICS",
+    "issn": "0033-3190",
+    "eissn": "1423-0348",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1423-0348": {
+    "name": "PSYCHOTHERAPY AND PSYCHOSOMATICS",
+    "issn": "0033-3190",
+    "eissn": "1423-0348",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "radiology": {
+    "name": "RADIOLOGY",
+    "issn": "0033-8419",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0033-8419": {
+    "name": "RADIOLOGY",
+    "issn": "0033-8419",
+    "eissn": "",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "redoxbiology": {
+    "name": "REDOX BIOLOGY",
+    "issn": "2213-2317",
+    "eissn": "2213-2317",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2213-2317": {
+    "name": "REDOX BIOLOGY",
+    "issn": "2213-2317",
+    "eissn": "2213-2317",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "sciencebulletin": {
+    "name": "SCIENCE BULLETIN",
+    "issn": "2095-9273",
+    "eissn": "2095-9281",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2095-9273": {
+    "name": "SCIENCE BULLETIN",
+    "issn": "2095-9273",
+    "eissn": "2095-9281",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2095-9281": {
+    "name": "SCIENCE BULLETIN",
+    "issn": "2095-9273",
+    "eissn": "2095-9281",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "sciencechina-chemistry": {
+    "name": "SCIENCE CHINA-CHEMISTRY",
+    "issn": "1674-7291",
+    "eissn": "1869-1870",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1674-7291": {
+    "name": "SCIENCE CHINA-CHEMISTRY",
+    "issn": "1674-7291",
+    "eissn": "1869-1870",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1869-1870": {
+    "name": "SCIENCE CHINA-CHEMISTRY",
+    "issn": "1674-7291",
+    "eissn": "1869-1870",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "scienceofthetotalenvironment": {
+    "name": "SCIENCE OF THE TOTAL ENVIRONMENT",
+    "issn": "0048-9697",
+    "eissn": "1879-1026",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0048-9697": {
+    "name": "SCIENCE OF THE TOTAL ENVIRONMENT",
+    "issn": "0048-9697",
+    "eissn": "1879-1026",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1879-1026": {
+    "name": "SCIENCE OF THE TOTAL ENVIRONMENT",
+    "issn": "0048-9697",
+    "eissn": "1879-1026",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "signaltransductionandtargetedtherapy": {
+    "name": "SIGNAL TRANSDUCTION AND TARGETED THERAPY",
+    "issn": "2095-9907",
+    "eissn": "2059-3635",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2095-9907": {
+    "name": "SIGNAL TRANSDUCTION AND TARGETED THERAPY",
+    "issn": "2095-9907",
+    "eissn": "2059-3635",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "2059-3635": {
+    "name": "SIGNAL TRANSDUCTION AND TARGETED THERAPY",
+    "issn": "2095-9907",
+    "eissn": "2059-3635",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "small": {
+    "name": "SMALL",
+    "issn": "1613-6810",
+    "eissn": "1613-6829",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1613-6810": {
+    "name": "SMALL",
+    "issn": "1613-6810",
+    "eissn": "1613-6829",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1613-6829": {
+    "name": "SMALL",
+    "issn": "1613-6810",
+    "eissn": "1613-6829",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "stroke": {
+    "name": "STROKE",
+    "issn": "0039-2499",
+    "eissn": "1524-4628",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "0039-2499": {
+    "name": "STROKE",
+    "issn": "0039-2499",
+    "eissn": "1524-4628",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1524-4628": {
+    "name": "STROKE",
+    "issn": "0039-2499",
+    "eissn": "1524-4628",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "thyroid": {
+    "name": "THYROID",
+    "issn": "1050-7256",
+    "eissn": "1557-9077",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1050-7256": {
+    "name": "THYROID",
+    "issn": "1050-7256",
+    "eissn": "1557-9077",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1557-9077": {
+    "name": "THYROID",
+    "issn": "1050-7256",
+    "eissn": "1557-9077",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "ultrasonicssonochemistry": {
+    "name": "ULTRASONICS SONOCHEMISTRY",
+    "issn": "1350-4177",
+    "eissn": "1873-2828",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1350-4177": {
+    "name": "ULTRASONICS SONOCHEMISTRY",
+    "issn": "1350-4177",
+    "eissn": "1873-2828",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "1873-2828": {
+    "name": "ULTRASONICS SONOCHEMISTRY",
+    "issn": "1350-4177",
+    "eissn": "1873-2828",
+    "tier": "高水平4类",
+    "tier_level": 3
+  },
+  "畜牧与生物技术杂志（英文版）": {
+    "name": "畜牧与生物技术杂志（英文版）",
+    "issn": "1674-9782",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "1674-9782": {
+    "name": "畜牧与生物技术杂志（英文版）",
+    "issn": "1674-9782",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "国际口腔科学杂志（英文版）": {
+    "name": "国际口腔科学杂志（英文版）",
+    "issn": "1674-2818",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "1674-2818": {
+    "name": "国际口腔科学杂志（英文版）",
+    "issn": "1674-2818",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "国家科学评论（英文）": {
+    "name": "国家科学评论（英文）",
+    "issn": "2095-5138",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "2095-5138": {
+    "name": "国家科学评论（英文）",
+    "issn": "2095-5138",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "纳米研究（英文版）": {
+    "name": "纳米研究（英文版）",
+    "issn": "1998-0124",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "1998-0124": {
+    "name": "纳米研究（英文版）",
+    "issn": "1998-0124",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "微系统与纳米工程（英文）": {
+    "name": "微系统与纳米工程（英文）",
+    "issn": "2055-7434",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "2055-7434": {
+    "name": "微系统与纳米工程（英文）",
+    "issn": "2055-7434",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "药学学报（英文）": {
+    "name": "药学学报（英文）",
+    "issn": "2211-3835",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "2211-3835": {
+    "name": "药学学报（英文）",
+    "issn": "2211-3835",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "运动与健康科学（英文）": {
+    "name": "运动与健康科学（英文）",
+    "issn": "2095-2546",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "2095-2546": {
+    "name": "运动与健康科学（英文）",
+    "issn": "2095-2546",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "中国科学:生命科学（英文版）": {
+    "name": "中国科学: 生命科学（英文版）",
+    "issn": "1674-7305",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "1674-7305": {
+    "name": "中国科学: 生命科学（英文版）",
+    "issn": "1674-7305",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "中国免疫学杂志（英文版）": {
+    "name": "中国免疫学杂志（英文版）",
+    "issn": "1672-7681",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "1672-7681": {
+    "name": "中国免疫学杂志（英文版）",
+    "issn": "1672-7681",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "中华医学杂志（英文版）": {
+    "name": "中华医学杂志（英文版）",
+    "issn": "0366-6999",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "0366-6999": {
+    "name": "中华医学杂志（英文版）",
+    "issn": "0366-6999",
+    "eissn": "",
+    "tier": "高水平5A类",
+    "tier_level": 4
+  },
+  "癌症生物学与医学": {
+    "name": "癌症生物学与医学",
+    "issn": "2095-3941",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "2095-3941": {
+    "name": "癌症生物学与医学",
+    "issn": "2095-3941",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "材料科学技术（英文版）": {
+    "name": "材料科学技术（英文版）",
+    "issn": "1005-0302",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1005-0302": {
+    "name": "材料科学技术（英文版）",
+    "issn": "1005-0302",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "东南大学学报（哲学社会科学版）": {
+    "name": "东南大学学报（哲学社会科学版）",
+    "issn": "1671-511X",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1671-511X": {
+    "name": "东南大学学报（哲学社会科学版）",
+    "issn": "1671-511X",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "法学研究": {
+    "name": "法学研究",
+    "issn": "1002-896X",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1002-896X": {
+    "name": "法学研究",
+    "issn": "1002-896X",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "寒地医学（英文）": {
+    "name": "寒地医学（英文）",
+    "issn": "2096-9074",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "2096-9074": {
+    "name": "寒地医学（英文）",
+    "issn": "2096-9074",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "马克思主义与现实": {
+    "name": "马克思主义与现实",
+    "issn": "1004-5961",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1004-5961": {
+    "name": "马克思主义与现实",
+    "issn": "1004-5961",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "贫困所致传染病（英文）": {
+    "name": "贫困所致传染病（英文）",
+    "issn": "2095-5162",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "2095-5162": {
+    "name": "贫困所致传染病（英文）",
+    "issn": "2095-5162",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "软科学": {
+    "name": "软科学",
+    "issn": "1001-8409",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1001-8409": {
+    "name": "软科学",
+    "issn": "1001-8409",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "神经科学通报": {
+    "name": "神经科学通报",
+    "issn": "1673-7067",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1673-7067": {
+    "name": "神经科学通报",
+    "issn": "1673-7067",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "药物分析学报（英文）": {
+    "name": "药物分析学报（英文）",
+    "issn": "2095-1779",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "2095-1779": {
+    "name": "药物分析学报（英文）",
+    "issn": "2095-1779",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中国科技史杂志": {
+    "name": "中国科技史杂志",
+    "issn": "1673-1441",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1673-1441": {
+    "name": "中国科技史杂志",
+    "issn": "1673-1441",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中国科学：信息科学（英文版）": {
+    "name": "中国科学：信息科学（英文版）",
+    "issn": "1674-733X",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1674-733X": {
+    "name": "中国科学：信息科学（英文版）",
+    "issn": "1674-733X",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中国临床心理学": {
+    "name": "中国临床心理学",
+    "issn": "1005-3611",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1005-3611": {
+    "name": "中国临床心理学",
+    "issn": "1005-3611",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中国人口科学": {
+    "name": "中国人口科学",
+    "issn": "1000-7881",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1000-7881": {
+    "name": "中国人口科学",
+    "issn": "1000-7881",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中国神经再生研究（英文版）": {
+    "name": "中国神经再生研究（英文版）",
+    "issn": "1673-5374",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1673-5374": {
+    "name": "中国神经再生研究（英文版）",
+    "issn": "1673-5374",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中国物理c": {
+    "name": "中国物理C",
+    "issn": "1674-1137",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1674-1137": {
+    "name": "中国物理C",
+    "issn": "1674-1137",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中国药理学报": {
+    "name": "中国药理学报",
+    "issn": "1671-4083",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1671-4083": {
+    "name": "中国药理学报",
+    "issn": "1671-4083",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中华创伤杂志（英文版）": {
+    "name": "中华创伤杂志（英文版）",
+    "issn": "1008-1275",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1008-1275": {
+    "name": "中华创伤杂志（英文版）",
+    "issn": "1008-1275",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中华地方病学杂志": {
+    "name": "中华地方病学杂志",
+    "issn": "2095-4255",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "2095-4255": {
+    "name": "中华地方病学杂志",
+    "issn": "2095-4255",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中华护理杂志": {
+    "name": "中华护理杂志",
+    "issn": "0254-1769",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "0254-1769": {
+    "name": "中华护理杂志",
+    "issn": "0254-1769",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中华流行病学杂志": {
+    "name": "中华流行病学杂志",
+    "issn": "0254-6450",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "0254-6450": {
+    "name": "中华流行病学杂志",
+    "issn": "0254-6450",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中华小儿外科杂志": {
+    "name": "中华小儿外科杂志",
+    "issn": "0253-3006",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "0253-3006": {
+    "name": "中华小儿外科杂志",
+    "issn": "0253-3006",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "中华预防医学杂志": {
+    "name": "中华预防医学杂志",
+    "issn": "0253-9624",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "0253-9624": {
+    "name": "中华预防医学杂志",
+    "issn": "0253-9624",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "转化神经变性病（英文）": {
+    "name": "转化神经变性病（英文）",
+    "issn": "2047-9158",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "2047-9158": {
+    "name": "转化神经变性病（英文）",
+    "issn": "2047-9158",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "自然辩证法通讯": {
+    "name": "自然辩证法通讯",
+    "issn": "1000-0763",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  },
+  "1000-0763": {
+    "name": "自然辩证法通讯",
+    "issn": "1000-0763",
+    "eissn": "",
+    "tier": "高水平5B类",
+    "tier_level": 5
+  }
+}

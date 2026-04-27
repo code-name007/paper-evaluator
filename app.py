@@ -152,125 +152,228 @@ def get_sci_zone_from_crossref(journal_name, session):
         pass
     return None
 
+def normalize_ocr_text(text):
+    """标准化 OCR 文本，去除 CJK 字符间随机空格，修复常见 OCR 错误"""
+    if not text:
+        return text
+
+    # 1. 处理 [J] [1] [A] 等标记中的多余空格
+    text = re.sub(r'\[\s*J\s*\]', '[J]', text)
+    text = re.sub(r'\[\s*(\d+)\s*\]', r'[\1]', text)
+    text = re.sub(r'\[\s*([A-Za-z])\s*\]', r'[\1]', text)
+
+    # 2. 去除 CJK 字符之间的空格
+    # 用占位符保护 [J]
+    marker_J = '\x01J\x01'
+    text_for_cjk = text.replace('[J]', marker_J)
+    # 去除 CJK 之间的空格（迭代两次确保彻底）
+    for _ in range(2):
+        text_for_cjk = re.sub(r'([\u4e00-\u9fff])\s+([\u4e00-\u9fff])', r'\1\2', text_for_cjk)
+    # 还原 [J]
+    text_for_cjk = text_for_cjk.replace(marker_J, '[J]')
+
+    # 3. 去除英文词之间多余空格
+    text_for_cjk = re.sub(r'([A-Za-z])\s+([A-Za-z])', r'\1\2', text_for_cjk)
+
+    # 4. 修复 OCR 常见错误
+    for old, new in [
+        ('\u2014', '-'), ('\u2013', '-'), ('\u203E', '-'), ('~', '-'),
+        ('\u3002 ', '\u3002'), ('\uff0c ', '\uff0c'), ('\uff1a ', '\uff1a'), ('\uff1b ', '\uff1b'),
+    ]:
+        text_for_cjk = text_for_cjk.replace(old, new)
+
+    # 5. 修复断开的多行条目
+    text_for_cjk = re.sub(r'(\d)\s*,\s*(\d{4})', r'\1, \2', text_for_cjk)
+    text_for_cjk = re.sub(r'(\d)\s*\(\s*(\d+)\s*\)', r'\1(\2)', text_for_cjk)
+    text_for_cjk = re.sub(r':\s*(\d)\s*[-]\s*(\d)\b', r': \1-\2', text_for_cjk)
+
+    # 6. 合并被错误断行的条目
+    lines = text_for_cjk.split('\n')
+    merged = []
+    NO_MERGE_END = set('\u3002\uff1b\uff01\uff1f\u2014\u201d\u300d\u300e\u301e\uff1b\u3001\uff0c?)}\"')
+    for line in lines:
+        line = line.strip()
+        if not line:
+            merged.append('')
+            continue
+        if (merged and merged[-1]
+                and merged[-1][-1] not in NO_MERGE_END
+                and re.match(r'^[A-Za-z0-9(]', line)):
+            merged[-1] += ' ' + line
+        else:
+            merged.append(line)
+    text_for_cjk = '\n'.join(merged)
+
+    # 7. 清理多余空格
+    text_for_cjk = re.sub(r'\s{2,}', ' ', text_for_cjk)
+    return text_for_cjk.strip()
+
+
+
+def normalize_ocr_text(text):
+    """标准化 OCR 文本，去除 CJK 字符间随机空格，修复常见 OCR 错误"""
+    if not text:
+        return text
+
+    # 1. 处理 [J] [1] [A] 等标记中的多余空格
+    text = re.sub(r'\[\s*J\s*\]', '[J]', text)
+    text = re.sub(r'\[\s*(\d+)\s*\]', r'[\1]', text)
+    text = re.sub(r'\[\s*([A-Za-z])\s*\]', r'[\1]', text)
+
+    # 2. 去除 CJK 字符之间的空格
+    # 用占位符保护 [J]
+    marker_J = '\x01J\x01'
+    text_for_cjk = text.replace('[J]', marker_J)
+    # 去除 CJK 之间的空格（迭代两次确保彻底）
+    for _ in range(2):
+        text_for_cjk = re.sub(r'([\u4e00-\u9fff])\s+([\u4e00-\u9fff])', r'\1\2', text_for_cjk)
+    # 还原 [J]
+    text_for_cjk = text_for_cjk.replace(marker_J, '[J]')
+
+    # 3. 去除英文词之间多余空格
+    text_for_cjk = re.sub(r'([A-Za-z])\s+([A-Za-z])', r'\1\2', text_for_cjk)
+
+    # 4. 修复 OCR 常见错误
+    for old, new in [
+        ('\u2014', '-'), ('\u2013', '-'), ('\u203E', '-'), ('~', '-'),
+        ('\u3002 ', '\u3002'), ('\uff0c ', '\uff0c'), ('\uff1a ', '\uff1a'), ('\uff1b ', '\uff1b'),
+    ]:
+        text_for_cjk = text_for_cjk.replace(old, new)
+
+    # 5. 修复断开的多行条目
+    text_for_cjk = re.sub(r'(\d)\s*,\s*(\d{4})', r'\1, \2', text_for_cjk)
+    text_for_cjk = re.sub(r'(\d)\s*\(\s*(\d+)\s*\)', r'\1(\2)', text_for_cjk)
+    text_for_cjk = re.sub(r':\s*(\d)\s*[-]\s*(\d)\b', r': \1-\2', text_for_cjk)
+
+    # 6. 合并被错误断行的条目
+    lines = text_for_cjk.split('\n')
+    merged = []
+    NO_MERGE_END = set('\u3002\uff1b\uff01\uff1f\u2014\u201d\u300d\u300e\u301e\uff1b\u3001\uff0c?)}\"')
+    for line in lines:
+        line = line.strip()
+        if not line:
+            merged.append('')
+            continue
+        if (merged and merged[-1]
+                and merged[-1][-1] not in NO_MERGE_END
+                and re.match(r'^[A-Za-z0-9(]', line)):
+            merged[-1] += ' ' + line
+        else:
+            merged.append(line)
+    text_for_cjk = '\n'.join(merged)
+
+    # 7. 清理多余空格
+    text_for_cjk = re.sub(r'\s{2,}', ' ', text_for_cjk)
+    return text_for_cjk.strip()
+
+
+
 def parse_papers(text):
-    """
-    从文本中智能解析论文列表。
-    采用状态机逐行处理，识别论文起始标记并聚块。
-    """
-    text = text.replace('\r\n', '\n').replace('\r', '\n')
-    raw_lines = [l.rstrip() for l in text.split('\n')]
+    """从 OCR 文本解析论文。先按 [J] 标记分段，再按编号分段。"""
+    text = normalize_ocr_text(text)
 
-    # 预处理：合并断行（行尾非终止符且下一行以小写或字母开头）
-    NO_MERGE_END = set('。；：！？》」』】。，、；：？！）】}.,;:!?)]}')
-    merged_lines = []
-    for line in raw_lines:
-        stripped = line.strip()
-        if not stripped:
-            merged_lines.append('')
-            continue
-        if (merged_lines and merged_lines[-1]
-                and merged_lines[-1][-1] not in NO_MERGE_END
-                and stripped[0].islower()):
-            merged_lines[-1] += ' ' + stripped
-        else:
-            merged_lines.append(stripped)
+    # 策略A：先找所有 [J] . 期刊名 模式，以它为锚点提取完整块
+    # 每个 [J] . xxx , YYYY 结构 = 一篇论文
+    j_anchor_pat = re.compile(
+        r'('                      # 组1：完整论文块
+        r'[\[\(]?\d+[\]\)]?\s*[.、，,、]?\s*'  # 编号
+        r'[^\[J]{0,120}'          # 作者+标题（跳过 [J] 区域）
+        r'(?:\[[J\]]\s*[.,]\s*)?'  # 可选 [J] 标记
+        r'[^,，]{2,60}\s*,\s*20\d\d'  # 期刊名 + 年
+        r'[^)]{0,80}'            # 卷期页
+        r')'
+    )
+    j_blocks = [m.group(1).strip() for m in j_anchor_pat.finditer(text) if len(m.group(1)) > 20]
 
-    # 论文起始行检测（多模式）
+    # 策略B：按编号分段
+    raw_lines = [l.strip() for l in text.split('\n') if l.strip()]
     PAPER_START = re.compile(
-        r'^('                      # 组1：编号前缀
-            r'\[\d+\]'             # [1]
-            r'|\([0-9]+\)'         # (1)
-            r'|\d+[．、\.】」』]'   # 1. 或 1、 或 1] 等
-            r'|【[0-9]+】'         # 【1】
-        r')\s*[\.、、\-\–—]?\s*'  # 可选分隔符
-        r'|^[0-9]{4}年'           # 或以年份开头
+        r'^(\[\d+\]|\([0-9]+\)|\d+[．、\.、]\s|【\d+】)\s*'
     )
-    # 章节标题检测
     SECTION_HDR = re.compile(
-        r'^[一二三四五六七八九十]+[、．.·]\s*(?:发表|论文|学术|科研|课题|主持|著作|获奖|专利|教育|工作)'
+        r'^[一二三四五六七八九十]+[、．.·]\s*(?:发表|论文|学术|科研|课题|主持|著作|获奖|专利)'
         r'|^(?:期刊论文|学术论文|论著|代表作)[:：]'
-        r'|^\(?[0-9]+\)?\s*(?:、|·)\s*(?:发表|论文)'
     )
-
     blocks = []
-    current_lines = []
-
-    for line in merged_lines:
-        if not line.strip():
-            if current_lines:
-                blocks.append(' '.join(current_lines))
-                current_lines = []
+    current = []
+    for line in raw_lines:
+        if len(line) < 4:
             continue
-
-        # 章节标题 → 结束当前块
-        if SECTION_HDR.match(line.strip()):
-            if current_lines:
-                blocks.append(' '.join(current_lines))
-                current_lines = []
+        if SECTION_HDR.match(line):
+            if current:
+                blocks.append(' '.join(current))
+                current = []
             continue
-
-        # 新论文起始 → 结束当前块，开启新块
-        if PAPER_START.match(line.strip()):
-            if current_lines:
-                blocks.append(' '.join(current_lines))
-                current_lines = []
-            current_lines = [line.strip()]
+        if PAPER_START.match(line):
+            if current:
+                blocks.append(' '.join(current))
+            current = [line]
         else:
-            current_lines.append(line.strip())
+            current.append(line)
+    if current:
+        blocks.append(' '.join(current))
 
-    if current_lines:
-        blocks.append(' '.join(current_lines))
-
-    # 过滤：每块至少30字符，必须有期刊/年/页等学术特征
-    filtered = []
-    for b in blocks:
-        if len(b) < 20:
+    # 合并两种策略，去重
+    all_blocks = blocks + j_blocks
+    seen = set()
+    result = []
+    for b in all_blocks:
+        b = b.strip()
+        if len(b) < 15:
             continue
-        has_year = bool(re.search(r'20[12]\d', b))
-        has_journal = bool(re.search(r'[《》][^《》]{2,50}[《》]|'
-                                      r'[A-Z][a-z]+(\s+[A-Z][a-z]+){0,3}\s*,'
-                                      r'|期刊|学报|杂志|会记|文集', b))
-        has_page = bool(re.search(r'\d+\s*[-–—~]\s*\d+', b))
-        if has_year or has_journal or has_page:
-            filtered.append({'raw': b, 'parts': [b]})
+        key = re.sub(r'\s+', '', b[:60])
+        if key in seen:
+            continue
+        seen.add(key)
+        has_year = bool(re.search(r'20\d\d', b))
+        has_jmark = bool(re.search(r'[《》[J].]|期刊|学报|杂志', b))
+        has_page = bool(re.search(r'\d+\s*[-]\s*\d+', b))
+        if has_year and (has_jmark or has_page):
+            result.append({'raw': b, 'parts': [b]})
 
-    return filtered
-
+    return result
 
 
 def extract_paper_info(paper):
-    """
-    从论文文本块中提取各字段。
-    期刊名、标题、年、卷、期、页码、作者位置逐字段多模式提取。
-    """
+    """从论文文本块提取信息 - 期刊名精确版"""
     raw = paper.get('raw', '')
     t = raw
 
-    # ========== 期刊名 ==========
     journal = ''
-    j_pats = [
-        r'《([^》]{2,50})》',                                                # 《中华医学杂志》
-        r'\.?\s*([A-Z][A-Za-z\s&:\'\-]{3,60}?)\s*,\s*(?:20\d\d|Vol\.?|vol\.?)',  # Nature, 2020 或 Nature, Vol.10
-        r'\[J\]\.\s+([^\s,，]{2,40}?)\s*,',
-        r'发表(?:于|在)+([^\s,，。]{2,40}?)(?:\s*[，,]|\s*20)',              # 发表于中华医学杂志,
-        r'期刊[：:]\s*([^\s,，。]{2,40})',                                   # 期刊: 中华医学杂志
-        r'学报[：:]\s*([^\s,，。]{2,40})',                                    # 学报:
-        r'\b([A-Z][A-Za-z\s&:\-]{3,50})\s*\(\d{4}\)',                      # Nature (2020)
-    ]
-    for pat in j_pats:
-        m = re.search(pat, t, re.I)
+
+    # 策略1：精确找 [J] . 期刊名 , 年
+    m = re.search(r'\[J\]\s*\.\s*([\u4e00-\u9fffA-Za-z][^\s,，]{0,60})\s*,\s*20\d\d', t)
+    if m:
+        cand = re.sub(r'\s+', '', m.group(1))
+        # 去掉前导噪声（[数字]、作者名等）
+        cand = re.sub(r'^\d+\]?\s*', '', cand)  # 去掉 [1] 等
+        cand = re.sub(r'^[^\u4e00-\u9fffA-Za-z]+', '', cand)  # 去掉前导非CJK/Latin
+        cand = re.sub(r'^[．.、,;：:：\d]+', '', cand)
+        # 去掉结尾噪声
+        cand = re.sub(r'[．.、,;：:;）]+$', '', cand)
+        if 2 < len(cand) < 70:
+            journal = cand
+
+    # 策略2：《》
+    if not journal:
+        m = re.search(r'《([^》]{2,50})》', t)
         if m:
-            cand = m.group(1).strip().strip('.,;:、')
-            if 2 < len(cand) < 70 and not re.match(r'^[\d\-\s]+$', cand):
-                # 去掉末尾标点
-                cand = re.sub(r'[,.，;;：:]+$', '', cand)
-                cand = re.sub(r'^[*#\d\s]+', '', cand)
+            journal = m.group(1).strip()
+
+    # 策略3：精确找 . 期刊名 , 年（期刊名前是点号）
+    if not journal:
+        m = re.search(r'\.\s*([\u4e00-\u9fffA-Za-z][^\s,，]{2,60})\s*,\s*20\d\d', t)
+        if m:
+            cand = re.sub(r'\s+', '', m.group(1))
+            cand = re.sub(r'^[^\u4e00-\u9fffA-Za-z\d]+', '', cand)
+            cand = re.sub(r'^[．.、,;：:：\d]+', '', cand)
+            cand = re.sub(r'[．.、,;：:;）]+$', '', cand)
+            if 2 < len(cand) < 70:
                 journal = cand
-                break
 
     # ========== 年份 ==========
     year = ''
-    for pat in [r'(20[12]\d)年?', r'[\(©](20[12]\d)[\)]', r',\s*(20[12]\d)[,\s]', r'(20[12]\d)年第']:
+    for pat in [r'(20[12]\d)年?', r'[\[(](20[12]\d)[)\]]', r',\s*(20[12]\d)[,\s]']:
         m = re.search(pat, t)
         if m:
             yr = re.sub(r'\D', '', m.group(1))
@@ -280,38 +383,35 @@ def extract_paper_info(paper):
 
     # ========== 卷、期 ==========
     vol = ''; issue = ''
-    for pat in [r'Vol\.?\s*(\d+)', r'vol\.?\s*(\d+)', r'第(\d+)卷', r'[卷v][olume]*[：:.]?\s*(\d+)']:
-        m = re.search(pat, t, re.I)
-        if m:
-            vol = m.group(1)
-            break
-    # 尝试 10(2) 格式
-    m_vi = re.search(r'(\d+)\s*\((\d+)\)', t)
+    m_vi = re.search(r'(\d{1,4})\s*\(\s*(\d{1,2})\s*\)', t)
     if m_vi:
         vol = m_vi.group(1)
         issue = m_vi.group(2)
-    for pat in [r'第(\d+)期', r'[期(](\d+)\)?', r'\((\d+)\)\s*$']:
-        m = re.search(pat, t)
-        if m and not issue:
-            issue = m.group(1)
-            break
+    else:
+        m_vol = re.search(r'[卷v][olume]*[：.\s]*(\d{1,4})', t, re.I)
+        if m_vol:
+            vol = m_vol.group(1)
+        m_iss = re.search(r'第\s*(\d{1,2})\s*期', t)
+        if m_iss:
+            issue = m_iss.group(1)
 
     # ========== 页码 ==========
     pages = ''
-    for pat in [r'(\d+)\s*[-–—~∼]\s*(\d+)\s*(?:p\.?|pp\.?|页)?', r'pp?\.?\s*(\d+)\s*[-–]\s*(\d+)']:
+    for pat in [r'(\d{1,5})\s*[-]\s*(\d{1,5})']:
         m = re.search(pat, t)
         if m:
-            pages = f"{m.group(1)}-{m.group(2)}"
-            break
+            p1, p2 = m.group(1), m.group(2)
+            if len(p1) <= 5 and len(p2) <= 5:
+                pages = f"{p1}-{p2}"
+                break
 
-    # ========== 论文标题 ==========
+    # ========== 标题 ==========
     title = ''
-    for pat in [r'《([^》]{5,80})》', r'^([A-Z][A-Za-z\s:\-]{10,120})$',
-                r'标题[：:]\s*([^\n]{5,100})', r'论文[：:]\s*([^\n]{5,100})']:
+    for pat in [r'《([^》]{5,80})》', r'^([A-Z][A-Za-z\s:\-]{10,120})$']:
         m = re.search(pat, t, re.I | re.MULTILINE)
         if m:
             cand = m.group(1).strip()
-            if 5 < len(cand) < 130:
+            if 5 < len(cand) < 120:
                 title = cand
                 break
 
@@ -319,7 +419,6 @@ def extract_paper_info(paper):
     is_first = bool(re.search(r'第一作者|排名第一|共一|共同第一|首位作者', t))
     is_corr = bool(re.search(r'通讯作者|通信作者|Corresponding|联系作者', t, re.I))
     has_marker = bool(re.search(r'作者|author', t, re.I))
-
     position = []
     if is_first: position.append('第一作者')
     if is_corr: position.append('通讯作者')
@@ -334,27 +433,23 @@ def extract_paper_info(paper):
         'raw': raw[:300],
         'is_valid': bool(position) or has_marker,
         'position': '、'.join(position) if position else '（未标注作者位置）',
-        'parts': paper.get('parts', []),
     }
 
 
-if __name__ == '__main__':
-    sample = """
-一、 发表论文
-1. 张三, 李四. 人工智能在医学中的应用研究[J]. 中华医学杂志, 2023, 45(3): 123-130. （第一作者）
-2. 王五, 赵六. 机器学习算法综述[J]. 计算机学报, 2022, 38(5): 456-470. （通讯作者）
-[3] 刘七. 大数据时代的隐私保护[C]. 信息安全会议, 2021: 78-85.
-4. 陈八. 深度学习在影像诊断中的应用[J]. 中华放射学杂志, 2024, 58(1): 34-40. 第一作者
-"""
-    papers = parse_papers(sample)
-    print(f"识别到: {len(papers)} 篇")
-    for i, p in enumerate(papers):
-        info = extract_paper_info(p)
-        print(f"\n--- 第{i+1}篇 ---")
-        print(f"  期刊: [{info['journal_name']}]")
-        print(f"  年: {info['year']}  卷: {info['volume']}  期: {info['issue']}  页: {info['pages']}")
-        print(f"  位置: {info['position']}  有效: {info['is_valid']}")
-        print(f"  原文: {info['raw'][:100]}")
+# Test
+tests = [
+    (" . 中华医学杂志 , 2023 , 45(3) : 123 - 130 . （第一作者）", "中华医学杂志/2023"),
+    (" . 计算机学报 , 2022 , 38(5) : 456 - 470 . （通讯作者） 3 . 陈六 . 大数据分析方法 [J] . 信息科学学报 , 2024 , 29(2) : 78 - 90 .", "计算机学报/2022"),
+    ("[1] 张三 . 人工智能在医学中的应用研究 [J] . 中华医学杂志 , 2023 , 45(3) : 123 - 130 . （第一作者）", "中华医学杂志/2023"),
+    ("1. 张三, 李四. 人工智能在医学中的应用研究[J]. 中华医学杂志, 2023, 45(3): 123-130. （第一作者）", "中华医学杂志/2023"),
+    ("2. 王五, 赵六. 机器学习算法综述[J]. 计算机学报, 2022, 38(5): 456-470. （通讯作者）", "计算机学报/2022"),
+    ("3. 陈八. 深度学习在影像诊断中的应用[J]. 中华放射学杂志, 2024, 58(1): 34-40. 第一作者", "中华放射学杂志/2024"),
+]
+
+for t, expected in tests:
+    info = extract_paper_info({'raw': t})
+    ok = "✓" if info['journal_name'] in expected and info['year'] in expected else "✗"
+    print(f"{ok} 期刊:[{info['journal_name']}] 年:{info['year']} 卷:{info['volume']} 期:{info['issue']} 页:{info['pages']} 位置:{info['position']}")
 
 def main():
     st.title("📖 论文情况评价 & 高水平期刊匹配系统")

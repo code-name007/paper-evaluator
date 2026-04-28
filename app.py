@@ -90,12 +90,20 @@ def call_minimax_vision(image_base64_list, prompt, model="MiniMax-VL-01"):
             headers=headers, json=payload, timeout=300
         )
         if response.status_code == 200:
-            result = response.json()
-            msg = result.get("choices", [{}])[0].get("message", {})
-            return msg.get("content", ""), None
-        return None, f"API 失败 ({response.status_code})"
+            try:
+                result = response.json()
+                if result is None:
+                    return None, f"API 返回空JSON: {response.text[:200]}"
+                choices = result.get("choices")
+                if not choices:
+                    return None, f"API 无 choices 返回: {str(result)[:200]}"
+                msg = choices[0].get("message", {})
+                return msg.get("content", ""), None
+            except Exception as e2:
+                return None, f"解析响应失败: {str(e2)}, 响应内容: {response.text[:200]}"
+        return None, f"API 失败 ({response.status_code}): {response.text[:200]}"
     except Exception as e:
-        return None, f"网络错误: {str(e)}"
+        return None, f"请求异常: {str(e)}"
 
 
 PAPER_EXTRACT_PROMPT = """你是一位专业的学术论文评审专家。请仔细阅读这份简历中的论文列表，并提取每篇论文的详细信息。

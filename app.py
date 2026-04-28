@@ -16,18 +16,40 @@ import pandas as pd
 
 # ==================== MiniMax API 调用 ====================
 
-MINIMAX_API_BASE = "https://api.minimax.chat/v1"
-MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
+# ==================== MiniMax API 配置 ====================
+# 优先级：st.secrets（Streamlit Cloud）> 环境变量 > 本地配置文件
 
-if not MINIMAX_API_KEY:
-    config_path = os.path.expanduser("~/.openclaw/config.json")
-    if os.path.exists(config_path):
-        try:
-            with open(config_path) as f:
-                config = json.load(f)
-                MINIMAX_API_KEY = config.get("providers", {}).get("minimax", {}).get("apiKey", "")
-        except Exception:
-            pass
+def get_minimax_config():
+    """获取 MiniMax API 配置，兼容本地和 Streamlit Cloud"""
+    api_key = ""
+    api_base = "https://api.minimax.chat/v1"
+
+    # 1. 尝试 st.secrets（Streamlit Cloud 部署时使用）
+    try:
+        api_key = st.secrets["MINIMAX_API_KEY"]
+        api_base = st.secrets.get("MINIMAX_API_BASE", api_base)
+    except Exception:
+        pass
+
+    # 2. 尝试环境变量
+    if not api_key:
+        api_key = os.environ.get("MINIMAX_API_KEY", "")
+
+    # 3. 尝试本地配置文件
+    if not api_key:
+        config_path = os.path.expanduser("~/.openclaw/config.json")
+        if os.path.exists(config_path):
+            try:
+                with open(config_path) as f:
+                    config = json.load(f)
+                    api_key = config.get("providers", {}).get("minimax", {}).get("apiKey", "")
+            except Exception:
+                pass
+
+    return api_key, api_base
+
+
+MINIMAX_API_KEY, MINIMAX_API_BASE = get_minimax_config()
 
 
 def pdf_to_images(pdf_bytes, dpi=150):
@@ -65,7 +87,7 @@ def call_minimax_vision(image_base64_list, prompt, model="MiniMax-VL-01"):
     try:
         response = requests.post(
             f"{MINIMAX_API_BASE}/text/chatcompletion_v2",
-            headers=headers, json=payload, timeout=180
+            headers=headers, json=payload, timeout=300
         )
         if response.status_code == 200:
             result = response.json()
